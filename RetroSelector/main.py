@@ -1,8 +1,15 @@
 import os
+from RetroSelector.ConsoleContainer import ConsoleContainer
 
 
 def default_function():
     print('Chyba Cię coś pokiełbasiło. Ten skrypt to samo menu!')
+
+    x = ConsoleContainer()
+    x.add_points('NES', 2)
+    x.print_points('NES')
+    print(x.max_points_console())
+
     input('\n                 O gówno, ja przepraszam. Kliknij [Enter]')
 
 
