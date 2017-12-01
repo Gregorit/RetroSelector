@@ -23,9 +23,9 @@ class ConsoleContainer:
     # if arguments are invalid.
     def add(self, console, points):
         if console not in self.consoles:
-            raise ValueError(console + ' not found in console storage.')
+            raise ValueError('{} not found in console storage.'.format(console))
         elif not isinstance(points, int):
-            raise TypeError(points + ' is not a digit number.')
+            raise TypeError('{} is not a digit number.'.format(points))
         else:
             current_points = self.console_points[console]
             self.console_points[console] = current_points + points
@@ -33,10 +33,10 @@ class ConsoleContainer:
     # prints amount of points for given console name.
     def show(self, console):
         if console not in self.consoles:
-            raise ValueError(console + ' not found in console storage.')
+            raise ValueError('{} not found in console storage.'.format(console))
         else:
             current_points = self.console_points[console]
-            print(console + ' has ' + str(current_points) + ' points.')
+            print('{} has {} points.'.format(console, str(current_points)))
 
     # returns name of console with maximum amount of points collected.
     def max_points_console(self):
