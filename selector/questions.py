@@ -6,15 +6,20 @@ from .pointmanager import ConsoleContainer
 import os
 
 points = ConsoleContainer()
-question_and_answers = {}
 
 
 def questions():
     generation_question()
 
 
-def choice_and_clear():
+def choice_and_clear(answers_number):
     choice = input('Wybór: ')
+
+    if (not choice.isdigit()) or int(choice) > answers_number or int(choice) < 1:
+        print('Podano nieprawidłową odpowiedź.')
+        print('Wpisz ją jeszcze raz')
+        choice_and_clear(answers_number)
+
     os.system('cls' if os.name == 'nt' else 'clear')
     return choice
 
@@ -29,23 +34,21 @@ def generation_question():
     print('(5) nie mam konkretnej')
     print('***')
 
-    choice = choice_and_clear()
+    choice = choice_and_clear(5)
 
     '''
     przyklad dodawania punktow do konsol,
-    tylko propozycja
+    tylko propozycja :)
     '''
     if choice is 1:
         points.add('NES', 2)
     elif choice is 2:
         points.add('SNES', 2)
 
-    question_and_answers.update({'generation': choice})
-
-    game_genre_question()
+    game_genre_question(choice)
 
 
-def game_genre_question():
+def game_genre_question(gen_choice):
     print('***')
     print('Jaki gatunek gier preferujesz najbardziej?')
     print('(1) gry akcji')
@@ -67,9 +70,9 @@ def game_genre_question():
     print('(17) bez znaczenia')
     print('***')
 
-    choice = choice_and_clear()
+    choice = choice_and_clear(17)
 
-    if question_and_answers.get('generation') is 1:
+    if gen_choice is '1':
         graphic_dim_question()
     else:
         console_type_question()
@@ -82,7 +85,7 @@ def console_type_question():
     print('(2) przenośna')
     print('***')
 
-    choice = choice_and_clear()
+    choice = choice_and_clear(2)
 
     action = {
         '1': graphic_dim_question,
@@ -98,7 +101,7 @@ def graphic_dim_question():
     print('(2) 3D')
     print('***')
 
-    choice = choice_and_clear()
+    choice = choice_and_clear(2)
     storage_question()
 
 
@@ -109,7 +112,7 @@ def storage_question():
     print('(2) płyta CD/DVD')
     print('***')
 
-    choice = choice_and_clear()
+    choice = choice_and_clear(2)
     stationary_multi_question()
 
 
@@ -122,7 +125,7 @@ def stationary_multi_question():
     print('(3) nie przewiduję')
     print('***')
 
-    choice = choice_and_clear()
+    choice = choice_and_clear(3)
     online_multi_question()
 
 
@@ -134,7 +137,7 @@ def online_multi_question():
     print('(2) nie')
     print('***')
 
-    choice = choice_and_clear()
+    choice = choice_and_clear(2)
     exclusive_games_question()
 
 
@@ -145,7 +148,7 @@ def graphic_colors_question():
     print('(2) kolor')
     print('***')
 
-    choice = choice_and_clear()
+    choice = choice_and_clear(2)
     battery_time_question()
 
 
@@ -157,7 +160,7 @@ def battery_time_question():
     print('(3) 15 i więcej godzin')
     print('***')
 
-    choice = choice_and_clear()
+    choice = choice_and_clear(3)
     battery_type_question()
 
 
@@ -168,7 +171,7 @@ def battery_type_question():
     print('(2) wbudowany akumulator')
     print('***')
 
-    choice = choice_and_clear()
+    choice = choice_and_clear(2)
     display_backlight_question()
 
 
@@ -179,7 +182,7 @@ def display_backlight_question():
     print('(2) nie')
     print('***')
 
-    choice = choice_and_clear()
+    choice = choice_and_clear(2)
     local_multi_question()
 
 
@@ -191,7 +194,7 @@ def local_multi_question():
     print('(3) nie przewiduję')
     print('***')
 
-    choice = choice_and_clear()
+    choice = choice_and_clear(3)
     exclusive_games_question()
 
 
@@ -202,4 +205,56 @@ def exclusive_games_question():
     print('(2) nie')
     print('***')
 
-    choice = choice_and_clear()
+    choice = choice_and_clear(2)
+    games_library_question()
+
+
+def games_library_question():
+    print('***')
+    print('Jakiej wielkości biblioteka gier ma być dostępna na sprzęt?')
+    print('(1) duża')
+    print('(2) średnia')
+    print('(3) mała')
+    print('(4) bez znaczenia')
+    print('***')
+
+    choice = choice_and_clear(4)
+    accessories_question()
+
+
+def accessories_question():
+    print('***')
+    print('Czy ma dla ciebie znaczenie wsparcie konsoli')
+    print('o akcesoria 1st i 3rd party?')
+    print('(1) tak')
+    print('(2) tak, ale tylko 1st party')
+    print('(3) nie')
+    print('***')
+
+    choice = choice_and_clear(3)
+    popularity_question()
+
+
+def popularity_question():
+    print('***')
+    print('Czy upragniony sprzęt ma być popularnym wyborem w latach')
+    print('jego świetności?')
+    print('(1) tak')
+    print('(2) nie')
+    print('***')
+
+    choice = choice_and_clear(2)
+    budget_question()
+
+
+def budget_question():
+    print('***')
+    print('Podaj maksymalny budżet przeznaczony na zakup konsoli.')
+    print('***')
+
+    budget = input('Wpisz budżet: ')
+
+    if not budget.isdigit():
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print('Podano nieprawidłową wartość.')
+        budget_question()
