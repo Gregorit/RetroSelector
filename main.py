@@ -3,7 +3,7 @@ from selector import questions
 
 
 def fancy_function():
-    print('Chyba Cię coś pokiełbasiło. Ten skrypt to samo menu!')
+    print('Chyba Cię coś pokiełbasiło. Opis jest jeszcze nie gotowy!')
     input('\n                 O gówno, ja przepraszam. Kliknij [Enter]')
 
 
@@ -18,7 +18,8 @@ def exit_confirmation():
 
 
 def menu():
-    os.system('cls' if os.name == 'nt' else 'clear')  # czyszczenie międzyplatformowe konsoli/terminala
+    # czyszczenie międzyplatformowe konsoli/terminala
+    os.system('cls' if os.name == 'nt' else 'clear')
     print('         *******************')
     print('         ** RetroSelector **         ')
     print('*************************************')
@@ -41,6 +42,8 @@ def menu():
     }
 
     choice = input("Wybór: ")
+    if not choice.isdigit():
+        menu()
     os.system('cls' if os.name == 'nt' else 'clear')
     action[choice]()
 
