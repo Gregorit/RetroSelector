@@ -2,14 +2,18 @@
 To będzie plik do wykonywania ciągu pytań i naliczania punktów
 '''
 
-from .pointmanager import ConsoleContainer
 import os
+import random
+from .pointmanager import ConsoleContainer
 
-points = ConsoleContainer()
+manage = ConsoleContainer()
 
 
 def questions():
     generation_question()
+    print('Najlepszym wyborem dla Ciebie jest {}.'
+          .format(manage.max_points_console()))
+    input('\n                  Kliknij [Enter]')
 
 
 def choice_and_clear(answers_number):
@@ -36,14 +40,14 @@ def generation_question():
 
     choice = choice_and_clear(5)
 
-    '''
-    przyklad dodawania punktow do konsol,
-    tylko propozycja :)
-    '''
-    if choice is 1:
-        points.add('NES', 2)
-    elif choice is 2:
-        points.add('SNES', 2)
+    if choice is '1':
+        manage.flag_by_gen(manage.gen4 + manage.gen5 + manage.gen6)
+    elif choice is '2':
+        manage.flag_by_gen(manage.gen3 + manage.gen5 + manage.gen6)
+    elif choice is '3':
+        manage.flag_by_gen(manage.gen3 + manage.gen4 + manage.gen6)
+    elif choice is '4':
+        manage.flag_by_gen(manage.gen3 + manage.gen4 + manage.gen5)
 
     game_genre_question(choice)
 
@@ -72,13 +76,46 @@ def game_genre_question(gen_choice):
 
     choice = choice_and_clear(17)
 
+    if choice is '1':
+        manage.add_points('NES', 2)
+    elif choice is '2':
+        manage.add_points('SNES', 2)
+    elif choice is '3':
+        manage.add_points('SNES', 2)
+    elif choice is '4':
+        manage.add_points('SNES', 2)
+    elif choice is '5':
+        manage.add_points('SNES', 2)
+    elif choice is '6':
+        manage.add_points('SNES', 2)
+    elif choice is '7':
+        manage.add_points('SNES', 2)
+    elif choice is '8':
+        manage.add_points('SNES', 2)
+    elif choice is '9':
+        manage.add_points('SNES', 2)
+    elif choice is '10':
+        manage.add_points('SNES', 2)
+    elif choice is '11':
+        manage.add_points('SNES', 2)
+    elif choice is '12':
+        manage.add_points('SNES', 2)
+    elif choice is '13':
+        manage.add_points('SNES', 2)
+    elif choice is '14':
+        manage.add_points('SNES', 2)
+    elif choice is '15':
+        manage.add_points('SNES', 2)
+    elif choice is '16':
+        manage.add_points('SNES', 2)
+
     if gen_choice is '1':
-        graphic_dim_question()
+        storage_question()
     else:
-        console_type_question()
+        console_type_question(gen_choice)
 
 
-def console_type_question():
+def console_type_question(gen_choice):
     print('***')
     print('Jaki rodzaj konsoli preferujesz?')
     print('(1) stacjonarna')
@@ -87,21 +124,46 @@ def console_type_question():
 
     choice = choice_and_clear(2)
 
-    action = {
-        '1': graphic_dim_question,
-        '2': graphic_colors_question,
-    }
-    action[choice]()
+    if choice is '1':
+        manage.flag_by_type(manage.portable)
+        if gen_choice is '5':
+            graphic_dim_question()
+        else:
+            storage_question()
+    elif choice is '2':
+        manage.flag_by_type(manage.stationary)
+        graphic_colors_question()
 
 
 def graphic_dim_question():
     print('***')
-    print('Jaki rodzaj grafiki ma mieć twoja konsola?')
+    print('Jaki rodzaj grafiki ma wspierać twoja konsola?')
     print('(1) 2D')
     print('(2) 3D')
     print('***')
 
     choice = choice_and_clear(2)
+
+    if choice is '1':
+        manage.add_points('7800', 2)
+        manage.add_points('Master_System', 2)
+        manage.add_points('NES', 2)
+        manage.add_points('Mega_Drive', 2)
+        manage.add_points('Neo_Geo', 2)
+        manage.add_points('SNES', 2)
+        manage.add_points('TurboGrafx_16', 2)
+
+    elif choice is '2':
+        manage.add_points('3DO', 2)
+        manage.add_points('Jaguar', 2)
+        manage.add_points('N64', 2)
+        manage.add_points('PlayStation', 2)
+        manage.add_points('Saturn', 2)
+        manage.add_points('Dreamcast', 2)
+        manage.add_points('GameCube', 2)
+        manage.add_points('PlayStation_2', 2)
+        manage.add_points('Xbox', 2)
+
     storage_question()
 
 
@@ -113,6 +175,7 @@ def storage_question():
     print('***')
 
     choice = choice_and_clear(2)
+
     stationary_multi_question()
 
 
@@ -126,6 +189,7 @@ def stationary_multi_question():
     print('***')
 
     choice = choice_and_clear(3)
+
     online_multi_question()
 
 
@@ -138,6 +202,7 @@ def online_multi_question():
     print('***')
 
     choice = choice_and_clear(2)
+
     exclusive_games_question()
 
 
@@ -149,6 +214,7 @@ def graphic_colors_question():
     print('***')
 
     choice = choice_and_clear(2)
+
     battery_time_question()
 
 
@@ -161,6 +227,7 @@ def battery_time_question():
     print('***')
 
     choice = choice_and_clear(3)
+
     battery_type_question()
 
 
@@ -172,6 +239,7 @@ def battery_type_question():
     print('***')
 
     choice = choice_and_clear(2)
+
     display_backlight_question()
 
 
@@ -183,6 +251,7 @@ def display_backlight_question():
     print('***')
 
     choice = choice_and_clear(2)
+
     local_multi_question()
 
 
@@ -195,6 +264,7 @@ def local_multi_question():
     print('***')
 
     choice = choice_and_clear(3)
+
     exclusive_games_question()
 
 
@@ -206,6 +276,7 @@ def exclusive_games_question():
     print('***')
 
     choice = choice_and_clear(2)
+
     games_library_question()
 
 
@@ -219,6 +290,7 @@ def games_library_question():
     print('***')
 
     choice = choice_and_clear(4)
+
     accessories_question()
 
 
@@ -232,6 +304,7 @@ def accessories_question():
     print('***')
 
     choice = choice_and_clear(3)
+
     popularity_question()
 
 
@@ -244,6 +317,17 @@ def popularity_question():
     print('***')
 
     choice = choice_and_clear(2)
+
+    removing_flagged_consoles()
+
+
+def removing_flagged_consoles():
+    print(manage.console_flagger)
+    print(manage.console_points)
+    for key in manage.console_flagger:
+        if key in manage.console_points:
+            del manage.console_points[key]
+    print(manage.console_points)
     budget_question()
 
 
@@ -258,3 +342,7 @@ def budget_question():
         os.system('cls' if os.name == 'nt' else 'clear')
         print('Podano nieprawidłową wartość.')
         budget_question()
+
+    # tu pętla sprawdzająca jest więcej niż jedna konsola posiadająca
+    # najwięcej punktów
+    # należy stworzyć tymczasową listę takich konsol po czym wykonać random
