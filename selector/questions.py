@@ -2,6 +2,9 @@
 To będzie plik do wykonywania ciągu pytań i naliczania punktów
 '''
 
+# zastanawiam się na przyznawaniu 50% punktów konsolom, które nie spełniają
+# wymagań wybranych w odpowiedziach
+
 import os
 import random
 from .pointmanager import ConsoleContainer
@@ -28,7 +31,7 @@ def choice_and_clear(answers_number):
     return choice
 
 
-def generation_question():
+def generation_question():  # DONE
     print('***')
     print('Czy celujesz w konkretną generację konsol?')
     print('(1) III generacja')
@@ -76,38 +79,38 @@ def game_genre_question(gen_choice):
 
     choice = choice_and_clear(17)
 
-    if choice is '1':
-        manage.add_points('NES', 2)
-    elif choice is '2':
-        manage.add_points('SNES', 2)
-    elif choice is '3':
-        manage.add_points('SNES', 2)
-    elif choice is '4':
-        manage.add_points('SNES', 2)
-    elif choice is '5':
-        manage.add_points('SNES', 2)
-    elif choice is '6':
-        manage.add_points('SNES', 2)
-    elif choice is '7':
-        manage.add_points('SNES', 2)
-    elif choice is '8':
-        manage.add_points('SNES', 2)
-    elif choice is '9':
-        manage.add_points('SNES', 2)
-    elif choice is '10':
-        manage.add_points('SNES', 2)
-    elif choice is '11':
-        manage.add_points('SNES', 2)
-    elif choice is '12':
-        manage.add_points('SNES', 2)
-    elif choice is '13':
-        manage.add_points('SNES', 2)
-    elif choice is '14':
-        manage.add_points('SNES', 2)
-    elif choice is '15':
-        manage.add_points('SNES', 2)
-    elif choice is '16':
-        manage.add_points('SNES', 2)
+    # if choice is '1':
+    #     manage.add_points('NES', 2)
+    # elif choice is '2':
+    #     manage.add_points('SNES', 2)
+    # elif choice is '3':
+    #     manage.add_points('SNES', 2)
+    # elif choice is '4':
+    #     manage.add_points('SNES', 2)
+    # elif choice is '5':
+    #     manage.add_points('SNES', 2)
+    # elif choice is '6':
+    #     manage.add_points('SNES', 2)
+    # elif choice is '7':
+    #     manage.add_points('SNES', 2)
+    # elif choice is '8':
+    #     manage.add_points('SNES', 2)
+    # elif choice is '9':
+    #     manage.add_points('SNES', 2)
+    # elif choice is '10':
+    #     manage.add_points('SNES', 2)
+    # elif choice is '11':
+    #     manage.add_points('SNES', 2)
+    # elif choice is '12':
+    #     manage.add_points('SNES', 2)
+    # elif choice is '13':
+    #     manage.add_points('SNES', 2)
+    # elif choice is '14':
+    #     manage.add_points('SNES', 2)
+    # elif choice is '15':
+    #     manage.add_points('SNES', 2)
+    # elif choice is '16':
+    #     manage.add_points('SNES', 2)
 
     if gen_choice is '1':
         storage_question()
@@ -115,7 +118,7 @@ def game_genre_question(gen_choice):
         console_type_question(gen_choice)
 
 
-def console_type_question(gen_choice):
+def console_type_question(gen_choice):  # DONE
     print('***')
     print('Jaki rodzaj konsoli preferujesz?')
     print('(1) stacjonarna')
@@ -135,7 +138,7 @@ def console_type_question(gen_choice):
         graphic_colors_question()
 
 
-def graphic_dim_question():
+def graphic_dim_question():  # DONE
     print('***')
     print('Jaki rodzaj grafiki ma wspierać twoja konsola?')
     print('(1) 2D')
@@ -145,29 +148,29 @@ def graphic_dim_question():
     choice = choice_and_clear(2)
 
     if choice is '1':
-        manage.add_points('7800', 2)
-        manage.add_points('Master_System', 2)
-        manage.add_points('NES', 2)
-        manage.add_points('Mega_Drive', 2)
-        manage.add_points('Neo_Geo', 2)
-        manage.add_points('SNES', 2)
-        manage.add_points('TurboGrafx_16', 2)
+        manage.add_points('7800', 3)
+        manage.add_points('Master_System', 3)
+        manage.add_points('NES', 3)
+        manage.add_points('Mega_Drive', 3)
+        manage.add_points('Neo_Geo', 3)
+        manage.add_points('SNES', 3)
+        manage.add_points('TurboGrafx_16', 3)
 
     elif choice is '2':
-        manage.add_points('3DO', 2)
-        manage.add_points('Jaguar', 2)
-        manage.add_points('N64', 2)
-        manage.add_points('PlayStation', 2)
-        manage.add_points('Saturn', 2)
-        manage.add_points('Dreamcast', 2)
-        manage.add_points('GameCube', 2)
-        manage.add_points('PlayStation_2', 2)
-        manage.add_points('Xbox', 2)
+        manage.add_points('3DO', 3)
+        manage.add_points('Jaguar', 3)
+        manage.add_points('N64', 3)
+        manage.add_points('PlayStation', 3)
+        manage.add_points('Saturn', 3)
+        manage.add_points('Dreamcast', 3)
+        manage.add_points('GameCube', 3)
+        manage.add_points('PlayStation_2', 3)
+        manage.add_points('Xbox', 3)
 
     storage_question()
 
 
-def storage_question():
+def storage_question():  # DONE
     print('***')
     print('Jaki rodzaj nośnika preferujesz w konsoli?')
     print('(1) kartridż')
@@ -175,6 +178,27 @@ def storage_question():
     print('***')
 
     choice = choice_and_clear(2)
+
+    if choice is '1':
+        manage.add_points('7800', 1)
+        manage.add_points('Master_System', 1)
+        manage.add_points('NES', 1)
+        manage.add_points('Mega_Drive', 1)
+        manage.add_points('Neo_Geo', 1)
+        manage.add_points('SNES', 1)
+        manage.add_points('TurboGrafx_16', 1)
+        manage.add_points('Jaguar', 1)
+        manage.add_points('N64', 1)
+
+    elif choice is '2':
+        manage.add_points('Neo_Geo', 1)
+        manage.add_points('3DO', 1)
+        manage.add_points('PlayStation', 1)
+        manage.add_points('Saturn', 1)
+        manage.add_points('Dreamcast', 1)
+        manage.add_points('GameCube', 1)
+        manage.add_points('PlayStation_2', 1)
+        manage.add_points('Xbox', 1)
 
     stationary_multi_question()
 
@@ -193,7 +217,7 @@ def stationary_multi_question():
     online_multi_question()
 
 
-def online_multi_question():
+def online_multi_question():  # DONE
     print('***')
     print('Czy przewidujesz grę po sieci jeśli')
     print('jest to możliwe?')
@@ -203,22 +227,44 @@ def online_multi_question():
 
     choice = choice_and_clear(2)
 
+    if choice is '1':
+        manage.add_points('Saturn', 1)
+        manage.add_points('Dreamcast', 1)
+        manage.add_points('GameCube', 1)
+        manage.add_points('PlayStation_2', 1)
+        manage.add_points('Xbox', 1)
+
     exclusive_games_question()
 
 
-def graphic_colors_question():
+def graphic_colors_question():  # DONE
     print('***')
     print('Jaki rodzaj grafiki ma mieć twoja konsola?')
-    print('(1) odcienie szarości')
+    print('(1) odcienie szarości/monochromatyczny')
     print('(2) kolor')
     print('***')
 
     choice = choice_and_clear(2)
 
+    if choice is '1':
+        manage.add_points('GB', 3)
+        manage.add_points('Neo-Geo_Pocket', 3)
+        manage.add_points('Virtual_Boy', 3)
+        manage.add_points('WonderSwan', 3)
+
+    elif choice is '2':
+        manage.add_points('Game_Gear', 3)
+        manage.add_points('Lynx', 3)
+        manage.add_points('GBC', 3)
+        manage.add_points('WonderSwan', 3)
+        manage.add_points('GBA', 3)
+        manage.add_points('Neo-Geo_Pocket_Color', 3)
+        manage.add_points('N-Gage', 3)
+
     battery_time_question()
 
 
-def battery_time_question():
+def battery_time_question():  # DONE (but needs some changes in hours)
     print('***')
     print('Jaki czas pracy na baterii jest dla ciebie optymalny?')
     print('(1) 3-8 godzin')
@@ -228,10 +274,26 @@ def battery_time_question():
 
     choice = choice_and_clear(3)
 
+    if choice is '1':
+        manage.add_points('Game_Gear', 2)
+        manage.add_points('Lynx', 2)
+        manage.add_points('Virtual_Boy', 2)
+        manage.add_points('N-Gage', 2)
+
+    elif choice is '2':
+        manage.add_points('GBA', 2)
+
+    elif choice is '3':
+        manage.add_points('GB', 2)
+        manage.add_points('GBC', 2)
+        manage.add_points('Neo-Geo_Pocket', 2)
+        manage.add_points('WonderSwan', 2)
+        manage.add_points('Neo-Geo_Pocket_Color', 2)
+
     battery_type_question()
 
 
-def battery_type_question():
+def battery_type_question():  # DONE
     print('***')
     print('Baterie czy wbudowany akumulator?')
     print('(1) baterie')
@@ -240,10 +302,25 @@ def battery_type_question():
 
     choice = choice_and_clear(2)
 
+    if choice is '1':
+        manage.add_points('GB', 1)
+        manage.add_points('Game_Gear', 1)
+        manage.add_points('Lynx', 1)
+        manage.add_points('GBC', 1)
+        manage.add_points('Neo-Geo_Pocket', 1)
+        manage.add_points('Virtual_Boy', 1)
+        manage.add_points('WonderSwan', 1)
+        manage.add_points('GBA', 1)
+        manage.add_points('Neo-Geo_Pocket_Color', 1)
+
+    elif choice is '2':
+        manage.add_points('GBA', 1)
+        manage.add_points('N-Gage', 1)
+
     display_backlight_question()
 
 
-def display_backlight_question():
+def display_backlight_question():  # DONE
     print('***')
     print('Czy konsola ma posiadać podświetlenie ekranu?')
     print('(1) tak')
@@ -251,6 +328,21 @@ def display_backlight_question():
     print('***')
 
     choice = choice_and_clear(2)
+
+    if choice is '1':
+        manage.add_points('Game_Gear', 2)
+        manage.add_points('Lynx', 2)
+        manage.add_points('Virtual_Boy', 2)
+        manage.add_points('GBA', 2)
+        manage.add_points('N-Gage', 2)
+
+    elif choice is '2':
+        manage.add_points('GB', 2)
+        manage.add_points('GBC', 2)
+        manage.add_points('Neo-Geo_Pocket', 2)
+        manage.add_points('WonderSwan', 2)
+        manage.add_points('GBA', 2)
+        manage.add_points('Neo-Geo_Pocket_Color', 2)
 
     local_multi_question()
 
@@ -308,7 +400,7 @@ def accessories_question():
     popularity_question()
 
 
-def popularity_question():
+def popularity_question():  # DONE (but need revision - choice between adding points or multiple)
     print('***')
     print('Czy upragniony sprzęt ma być popularnym wyborem w latach')
     print('jego świetności?')
@@ -317,6 +409,39 @@ def popularity_question():
     print('***')
 
     choice = choice_and_clear(2)
+
+    # adding points (6pts) or MULTIPLE POPULAR CONSOLES BY 1.25
+    if choice is '1':
+        manage.add_points('NES', 6)
+        manage.add_points('Mega_Drive', 6)
+        manage.add_points('SNES', 6)
+        manage.add_points('N64', 6)
+        manage.add_points('PlayStation', 6)
+        manage.add_points('GameCube', 6)
+        manage.add_points('PlayStation_2', 6)
+        manage.add_points('Xbox', 6)
+
+        manage.add_points('GB', 6)
+        manage.add_points('GBC', 6)
+        manage.add_points('GBA', 6)
+
+    elif choice is '2':
+        manage.add_points('7800', 6)
+        manage.add_points('Master_System', 6)
+        manage.add_points('Neo_Geo', 6)
+        manage.add_points('TurboGrafx_16', 6)
+        manage.add_points('3DO', 6)
+        manage.add_points('Jaguar', 6)
+        manage.add_points('Saturn', 6)
+        manage.add_points('Dreamcast', 6)
+
+        manage.add_points('Game_Gear', 6)
+        manage.add_points('Lynx', 6)
+        manage.add_points('Neo-Geo_Pocket', 6)
+        manage.add_points('Virtual_Boy', 6)
+        manage.add_points('WonderSwan', 6)
+        manage.add_points('Neo-Geo_Pocket_Color', 6)
+        manage.add_points('N-Gage', 6)
 
     removing_flagged_consoles()
 
@@ -327,6 +452,7 @@ def removing_flagged_consoles():
     for key in manage.console_flagger:
         if key in manage.console_points:
             del manage.console_points[key]
+    del manage.console_flagger[:]
     print(manage.console_points)
     budget_question()
 
@@ -336,7 +462,7 @@ def budget_question():
     print('Podaj maksymalny budżet przeznaczony na zakup konsoli.')
     print('***')
 
-    budget = input('Wpisz budżet: ')
+    budget = input('Wpisz budżet: PLN ')
 
     if not budget.isdigit():
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -345,4 +471,8 @@ def budget_question():
 
     # tu pętla sprawdzająca jest więcej niż jedna konsola posiadająca
     # najwięcej punktów
+    # jeżeli konsola jest za droga: dopisać do manage.console_flagger
+    #                               po czym sprawdzić, czy nie zostały usunięte
+    #                               wszystkie konsole, jeżeli tak - wybrać najtańszą
+    #                               i podać ile brakuje +/- kasy na zakup
     # należy stworzyć tymczasową listę takich konsol po czym wykonać random
