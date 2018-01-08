@@ -264,12 +264,12 @@ def graphic_colors_question():  # DONE
     battery_time_question()
 
 
-def battery_time_question():  # DONE (but needs some changes in hours)
+def battery_time_question():  # DONE
     print('***')
     print('Jaki czas pracy na baterii jest dla ciebie optymalny?')
-    print('(1) 3-8 godzin')
-    print('(2) 8-15 godzin')
-    print('(3) 15 i więcej godzin')
+    print('(1) 2-8 godzin')
+    print('(2) 8 i więcej godzin')
+    print('(3) bez znaczenia')
     print('***')
 
     choice = choice_and_clear(3)
@@ -282,8 +282,6 @@ def battery_time_question():  # DONE (but needs some changes in hours)
 
     elif choice is '2':
         manage.add_points('GBA', 2)
-
-    elif choice is '3':
         manage.add_points('GB', 2)
         manage.add_points('GBC', 2)
         manage.add_points('Neo-Geo_Pocket', 2)
@@ -397,51 +395,76 @@ def accessories_question():
 
     choice = choice_and_clear(3)
 
-    popularity_question()
+    extra_functions_question()
 
 
-def popularity_question():  # DONE (but need revision - choice between adding points or multiple)
+def extra_functions_question():
     print('***')
-    print('Czy upragniony sprzęt ma być popularnym wyborem w latach')
-    print('jego świetności?')
+    print('Jeżeli konsola pełni dodatkowe funckje (bez dodatkowych')
+    print('akcesoriów), np: odtwarzanie muzyki bądź filmów, rozmowy telefoniczne')
+    print('to czy byłbyś nimi zainteresowany?')
     print('(1) tak')
     print('(2) nie')
     print('***')
 
     choice = choice_and_clear(2)
 
-    # adding points (6pts) or MULTIPLE POPULAR CONSOLES BY 1.25
     if choice is '1':
-        manage.add_points('NES', 6)
-        manage.add_points('Mega_Drive', 6)
-        manage.add_points('SNES', 6)
-        manage.add_points('N64', 6)
-        manage.add_points('PlayStation', 6)
-        manage.add_points('GameCube', 6)
-        manage.add_points('PlayStation_2', 6)
-        manage.add_points('Xbox', 6)
+        manage.add_points('PlayStation', 1)
+        manage.add_points('Saturn', 1)
+        manage.add_points('Dreamcast', 1)
+        manage.add_points('PlayStation_2', 1)
+        manage.add_points('Xbox', 1)
+        manage.add_points('N-Gage', 1)
 
-        manage.add_points('GB', 6)
-        manage.add_points('GBC', 6)
-        manage.add_points('GBA', 6)
+    popularity_question()
+
+
+def popularity_question():  # DONE
+    print('***')
+    print('W jakim stopniu upragniony sprzęt ma być')
+    print('popularnym wyborem w latach jego świetności?')
+    print('(1) najpopularniejszym')
+    print('(2) popularnym')
+    print('(3) mało popularnym/niszowym')
+    print('***')
+
+    choice = choice_and_clear(3)
+
+    if choice is '1':
+        manage.multiply_points('NES', 1.25)
+        manage.multiply_points('SNES', 1.25)
+        manage.multiply_points('Mega_Drive', 1.25)
+        manage.multiply_points('PlayStation', 1.25)
+        manage.multiply_points('PlayStation_2', 1.25)
+
+        manage.multiply_points('GB', 1.25)
+        manage.multiply_points('GBC', 1.25)
+        manage.multiply_points('GBA', 1.25)
 
     elif choice is '2':
-        manage.add_points('7800', 6)
-        manage.add_points('Master_System', 6)
-        manage.add_points('Neo_Geo', 6)
-        manage.add_points('TurboGrafx_16', 6)
-        manage.add_points('3DO', 6)
-        manage.add_points('Jaguar', 6)
-        manage.add_points('Saturn', 6)
-        manage.add_points('Dreamcast', 6)
+        manage.multiply_points('7800', 1.5)
+        manage.multiply_points('Master_System', 1.5)
+        manage.multiply_points('TurboGrafx_16', 1.5)
+        manage.multiply_points('N64', 1.5)
+        manage.multiply_points('GameCube', 1.5)
+        manage.multiply_points('Xbox', 1.5)
 
-        manage.add_points('Game_Gear', 6)
-        manage.add_points('Lynx', 6)
-        manage.add_points('Neo-Geo_Pocket', 6)
-        manage.add_points('Virtual_Boy', 6)
-        manage.add_points('WonderSwan', 6)
-        manage.add_points('Neo-Geo_Pocket_Color', 6)
-        manage.add_points('N-Gage', 6)
+        manage.multiply_points('Game_Gear', 1.5)
+
+    elif choice is '3':
+        manage.multiply_points('Neo_Geo', 1.75)
+        manage.multiply_points('3DO', 1.75)
+        manage.multiply_points('Jaguar', 1.75)
+        manage.multiply_points('Saturn', 1.75)
+        manage.multiply_points('Dreamcast', 1.75)
+
+        manage.multiply_points('Lynx', 1.75)
+        manage.multiply_points('Neo-Geo_Pocket', 1.75)
+        manage.multiply_points('Virtual_Boy', 1.75)
+        manage.multiply_points('WonderSwan', 1.75)
+        manage.multiply_points('Neo-Geo_Pocket_Color', 1.75)
+        manage.multiply_points('N-Gage', 1.75)
 
     removing_flagged_consoles()
 
