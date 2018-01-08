@@ -53,6 +53,15 @@ class ConsoleContainer:
             current_points = self.console_points[console]
             self.console_points[console] = current_points + points
 
+    def multiply_points(self, console, multiply):
+        if console not in self.consoles:
+            raise ValueError('{} not found in console storage.'.format(console))
+        elif not isinstance(multiply, float):
+            raise TypeError('{} is not a digit number.'.format(multiply))
+        else:
+            current_points = self.console_points[console]
+            self.console_points[console] = current_points * multiply
+
     # prints amount of points for given console name.
     # [TAK NAPRAWDĘ W WERSJI KOŃCOWEJ BĘDZIE ZBĘDNE]
     def show(self, console):
