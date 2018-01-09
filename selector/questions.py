@@ -21,15 +21,53 @@ def questions():
     data = json.load(json_file)
     json_file.close()
     best_choice = manage.max_points_console()
+    os.system('cls' if os.name == 'nt' else 'clear')
 
     # printing informations about console using data from json file
     print('Najlepszym wyborem dla Ciebie jest {}.'
           .format(data[best_choice]['name']))
 
     if best_choice in manage.stationary:
-        None
+        print('-----------------------------------------')
+        print(data[best_choice]['name'])
+        print('\n    Producent: {}'.format(data[best_choice]['manufacturer']))
+        print('    Generacja: {}'.format(data[best_choice]['generation']))
+        print('    Lata sprzedaży: {}\n'.format(data[best_choice]['retail_years']))
+        print('    Rodzaj konsoli: {}'.format(data[best_choice]['type']))
+        print('    Grafika: {}'.format(data[best_choice]['graphic']))
+        print('    Nośnik: {}\n'.format(data[best_choice]['media']))
+        print('    Ilość gier: {}'.format(data[best_choice]['library_number']))
+        print('    Ilość exclusive\'ów: {}\n'
+              .format(data[best_choice]['exclusives_number']))
+        print('    Aktualna dostępność: {}'.format(data[best_choice]['rarity']))
+        print('    Aktualna cena sprzętu: około {} PLN'
+              .format(data[best_choice]['price']))
+        print('    Aktualne ceny gier: około {} PLN\n'
+              .format(data[best_choice]['games_price']))
+        print('Inne modele: {}'.format(data[best_choice]['other_models']))
+        print('Przeczytaj więcej: {}'.format(data[best_choice]['read_more']))
     elif best_choice in manage.portable:
-        None
+        print('-----------------------------------------')
+        print(data[best_choice]['name'])
+        print('\n    Producent: {}'.format(data[best_choice]['manufacturer']))
+        print('    Generacja: {}'.format(data[best_choice]['generation']))
+        print('    Lata sprzedaży: {}\n'.format(data[best_choice]['retail_years']))
+        print('    Rodzaj konsoli: {}'.format(data[best_choice]['type']))
+        print('    Rodzaj ekranu: {}'.format(data[best_choice]['screen']))
+        print('    Podświetlenie ekranu: {}'.format(data[best_choice]['light']))
+        print('    Nośnik: {}'.format(data[best_choice]['media']))
+        print('    Czas gry: {}'.format(data[best_choice]['playtime']))
+        print('    Zasilanie: {}\n'.format(data[best_choice]['power']))
+        print('    Ilość gier: {}'.format(data[best_choice]['library_number']))
+        print('    Ilość exclusive\'ów: {}\n'
+              .format(data[best_choice]['exclusives_number']))
+        print('    Aktualna dostępność: {}'.format(data[best_choice]['rarity']))
+        print('    Aktualna cena sprzętu: około {} PLN'
+              .format(data[best_choice]['price']))
+        print('    Aktualne ceny gier: około {} PLN\n'
+              .format(data[best_choice]['games_price']))
+        print('Inne modele: {}'.format(data[best_choice]['other_models']))
+        print('Przeczytaj więcej: {}'.format(data[best_choice]['read_more']))
 
     # cleaning and restoration of lists and dictionaries in pointmanager.py
     manage.consoles = manage.stationary + manage.portable
