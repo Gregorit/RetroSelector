@@ -25,13 +25,20 @@ def questions():
     # printing informations about console using data from json file
     print('Najlepszym wyborem dla Ciebie jest {}.'
           .format(data[best_choice]['name']))
+
+    # cleaning and restoration of lists and dictionaries in pointmanager.py
+    manage.consoles = manage.stationary + manage.portable
+    manage.console_points.clear()
+    for console in manage.consoles:
+        manage.console_points.update({console: 0})
+
     input('\n                  Kliknij [Enter]')
 
 
 def choice_and_clear(answers_number):
     choice = input('Wybór: ')
 
-    if (not choice.isdigit()) or int(choice) > answers_number or int(choice) < 1:
+    if not choice.isdigit() or int(choice) not in range(1, answers_number+1):
         print('Podano nieprawidłową odpowiedź.')
         print('Wpisz ją jeszcze raz')
         choice_and_clear(answers_number)
