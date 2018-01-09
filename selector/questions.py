@@ -7,6 +7,7 @@ To będzie plik do wykonywania ciągu pytań i naliczania punktów
 
 import os
 import random
+import json
 from .pointmanager import ConsoleContainer
 
 manage = ConsoleContainer()
@@ -14,8 +15,16 @@ manage = ConsoleContainer()
 
 def questions():
     generation_question()
+
+    # loading json data
+    json_file = open('selector/consoles.json', encoding="utf-8")  # jeżeli nie będzie polskich znaków -> usunąć encoding
+    data = json.load(json_file)
+    json_file.close()
+    best_choice = manage.max_points_console()
+
+    # printing informations about console using data from json file
     print('Najlepszym wyborem dla Ciebie jest {}.'
-          .format(manage.max_points_console()))
+          .format(data[best_choice]['name']))
     input('\n                  Kliknij [Enter]')
 
 
@@ -248,7 +257,7 @@ def graphic_colors_question():  # DONE
 
     if choice is '1':
         manage.add_points('GB', 3)
-        manage.add_points('Neo-Geo_Pocket', 3)
+        manage.add_points('Neo_Geo_Pocket', 3)
         manage.add_points('Virtual_Boy', 3)
         manage.add_points('WonderSwan', 3)
 
@@ -258,7 +267,7 @@ def graphic_colors_question():  # DONE
         manage.add_points('GBC', 3)
         manage.add_points('WonderSwan', 3)
         manage.add_points('GBA', 3)
-        manage.add_points('Neo-Geo_Pocket_Color', 3)
+        manage.add_points('Neo_Geo_Pocket_Color', 3)
         manage.add_points('N-Gage', 3)
 
     battery_time_question()
@@ -284,9 +293,9 @@ def battery_time_question():  # DONE
         manage.add_points('GBA', 2)
         manage.add_points('GB', 2)
         manage.add_points('GBC', 2)
-        manage.add_points('Neo-Geo_Pocket', 2)
+        manage.add_points('Neo_Geo_Pocket', 2)
         manage.add_points('WonderSwan', 2)
-        manage.add_points('Neo-Geo_Pocket_Color', 2)
+        manage.add_points('Neo_Geo_Pocket_Color', 2)
 
     battery_type_question()
 
@@ -305,11 +314,11 @@ def battery_type_question():  # DONE
         manage.add_points('Game_Gear', 1)
         manage.add_points('Lynx', 1)
         manage.add_points('GBC', 1)
-        manage.add_points('Neo-Geo_Pocket', 1)
+        manage.add_points('Neo_Geo_Pocket', 1)
         manage.add_points('Virtual_Boy', 1)
         manage.add_points('WonderSwan', 1)
         manage.add_points('GBA', 1)
-        manage.add_points('Neo-Geo_Pocket_Color', 1)
+        manage.add_points('Neo_Geo_Pocket_Color', 1)
 
     elif choice is '2':
         manage.add_points('GBA', 1)
@@ -337,10 +346,10 @@ def display_backlight_question():  # DONE
     elif choice is '2':
         manage.add_points('GB', 2)
         manage.add_points('GBC', 2)
-        manage.add_points('Neo-Geo_Pocket', 2)
+        manage.add_points('Neo_Geo_Pocket', 2)
         manage.add_points('WonderSwan', 2)
         manage.add_points('GBA', 2)
-        manage.add_points('Neo-Geo_Pocket_Color', 2)
+        manage.add_points('Neo_Geo_Pocket_Color', 2)
 
     local_multi_question()
 
@@ -460,23 +469,21 @@ def popularity_question():  # DONE
         manage.multiply_points('Dreamcast', 1.75)
 
         manage.multiply_points('Lynx', 1.75)
-        manage.multiply_points('Neo-Geo_Pocket', 1.75)
+        manage.multiply_points('Neo_Geo_Pocket', 1.75)
         manage.multiply_points('Virtual_Boy', 1.75)
         manage.multiply_points('WonderSwan', 1.75)
-        manage.multiply_points('Neo-Geo_Pocket_Color', 1.75)
+        manage.multiply_points('Neo_Geo_Pocket_Color', 1.75)
         manage.multiply_points('N-Gage', 1.75)
 
     removing_flagged_consoles()
 
 
 def removing_flagged_consoles():
-    print(manage.console_flagger)
-    print(manage.console_points)
     for key in manage.console_flagger:
         if key in manage.console_points:
             del manage.console_points[key]
     del manage.console_flagger[:]
-    print(manage.console_points)
+
     budget_question()
 
 
