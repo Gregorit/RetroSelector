@@ -17,7 +17,7 @@ def questions():
     generation_question()
 
     # loading json data
-    json_file = open('selector/consoles.json', encoding="utf-8")  # jeżeli nie będzie polskich znaków -> usunąć encoding
+    json_file = open('selector/consoles.json', encoding="utf-8")
     data = json.load(json_file)
     json_file.close()
     best_choice = manage.max_points_console()
@@ -25,6 +25,11 @@ def questions():
     # printing informations about console using data from json file
     print('Najlepszym wyborem dla Ciebie jest {}.'
           .format(data[best_choice]['name']))
+
+    if best_choice in manage.stationary:
+        None
+    elif best_choice in manage.portable:
+        None
 
     # cleaning and restoration of lists and dictionaries in pointmanager.py
     manage.consoles = manage.stationary + manage.portable
@@ -50,6 +55,8 @@ def choice_and_clear(answers_number):
 def generation_question():  # DONE
     print('***')
     print('Czy celujesz w konkretną generację konsol?')
+    print('[UWAGA!: wybierając konkretną generację odrzucasz')
+    print('         pozostałe konsole niezgodne z wyborem]')
     print('(1) III generacja')
     print('(2) IV generacja')
     print('(3) V generacja')
