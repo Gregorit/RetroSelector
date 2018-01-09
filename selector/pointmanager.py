@@ -27,7 +27,7 @@ class ConsoleContainer:
                        'TurboGrafx_16': 550, '3DO': 730, 'Jaguar': 1430,
                        'N64': 350, 'PlayStation': 140, 'Saturn': 410,
                        'Dreamcast': 460, 'GameCube': 200, 'PlayStation_2': 110,
-                       'Xbox': 220, 'GB': 160, 'Game_Gear': 300, 'Lynx': 475,
+                       'Xbox': 220, 'GB': 160, 'Game_Gear': 340, 'Lynx': 475,
                        'GBC': 200, 'Neo_Geo_Pocket': 400, 'Virtual_Boy': 1100,
                        'WonderSwan': 235, 'GBA': 170, 'Neo_Geo_Pocket_Color': 440,
                        'N-Gage': 250}
