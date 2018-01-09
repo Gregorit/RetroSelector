@@ -41,7 +41,7 @@ def menu():
         '0': exit_confirmation
     }
 
-    choice = input("Wybór: ")
+    choice = input("            Wybór: ")
     if not choice.isdigit() or int(choice) not in range(0, 3):
         menu()
     os.system('cls' if os.name == 'nt' else 'clear')
