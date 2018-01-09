@@ -1,105 +1,105 @@
 {
   "7800": {
     "name": "Atari 7800"
-  }
+  },
   
   "Master_System": {
     "name": "Sega Master System"
-  }
+  },
   
   "NES": {
     "name": "Nintendo Entertainment System"
-  }
+  },
   
   "Mega_Drive": {
     "name": "Sega Mega Drive"
-  }
+  },
   
   "Neo_Geo": {
     "name": "Neo Geo"
-  }
+  },
   
   "SNES": {
     "name": "Super Nintendo Entertainment System"
-  }
+  },
   
   "TurboGrafx_16": {
     "name": "TurboGrafx-16"
-  }
+  },
   
   "3DO": {
     "name": "3DO"
-  }
+  },
   
   "Jaguar": {
     "name": "Atari Jaguar"
-  }
+  },
   
   "N64": {
     "name": "Nintendo 64"
-  }
+  },
   
   "PlayStation": {
     "name": "PlayStation"
-  }
+  },
   
   "Saturn": {
     "name": "Sega Saturn"
-  }
+  },
   
   "Dreamcast": {
     "name": "Dreamcast"
-  }
-  
+  },
+
   "GameCube": {
     "name": "GameCube"
-  }
+  },
   
   "PlayStation_2": {
     "name": "PlayStation 2"
-  }
+  },
   
   "Xbox": {
     "name": "Xbox"
-  }
+  },
   
   
   
   "GB": {
     "name": "Game Boy"
-  }
+  },
   
   "Game_Gear": {
     "name": "Sega Game Gear"
-  }
+  },
   
   "Lynx": {
     "name": "Atari Lynx"
-  }
+  },
   
   "GBC": {
     "name": "Game Boy Color"
-  }
+  },
   
   "Neo_Geo_Pocket": {
     "name": "Neo Geo Pocket"
-  }
+  },
   
   "Virtual_Boy": {
     "name": "Virtual Boy"
-  }
+  },
   
   "WonderSwan": {
     "name": "WonderSwan"
-  }
+  },
   
   "GBA": {
     "name": "Game Boy Advance"
-  }
+  },
   
   "Neo_Geo_Pocket_Color": {
     "name": "Neo Geo Pocket Color"
-  }
+  },
   
   "N-Gage": {
     "name": "Nokia N-Gage"
