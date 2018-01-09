@@ -42,7 +42,7 @@ def menu():
     }
 
     choice = input("Wybór: ")
-    if not choice.isdigit():
+    if not choice.isdigit() or int(choice) > 2 or int(choice) < 0:
         menu()
     os.system('cls' if os.name == 'nt' else 'clear')
     action[choice]()
