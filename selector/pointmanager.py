@@ -8,17 +8,17 @@ class ConsoleContainer:
         self.gen4 = ['Mega_Drive', 'Neo_Geo', 'SNES', 'TurboGrafx_16',
                      'GB', 'Game_Gear', 'Lynx']
         self.gen5 = ['3DO', 'Jaguar', 'N64', 'PlayStation', 'Saturn',
-                     'GBC', 'Neo-Geo_Pocket', 'Virtual_Boy', 'WonderSwan']
+                     'GBC', 'Neo_Geo_Pocket', 'Virtual_Boy', 'WonderSwan']
         self.gen6 = ['Dreamcast', 'GameCube', 'PlayStation_2', 'Xbox',
-                     'GBA', 'Neo-Geo_Pocket_Color', 'N-Gage']
+                     'GBA', 'Neo_Geo_Pocket_Color', 'N-Gage']
 
         self.stationary = ['7800', 'Master_System', 'NES', 'Mega_Drive',
                            'Neo_Geo', 'SNES', 'TurboGrafx_16', '3DO', 'Jaguar',
                            'N64', 'PlayStation', 'Saturn', 'Dreamcast',
                            'GameCube', 'PlayStation_2', 'Xbox']
-        self.portable = ['GB', 'Game_Gear', 'Lynx', 'GBC', 'Neo-Geo_Pocket',
+        self.portable = ['GB', 'Game_Gear', 'Lynx', 'GBC', 'Neo_Geo_Pocket',
                          'Virtual_Boy', 'WonderSwan', 'GBA',
-                         'Neo-Geo_Pocket_Color', 'N-Gage']
+                         'Neo_Geo_Pocket_Color', 'N-Gage']
 
         self.consoles = self.stationary + self.portable
 
@@ -28,8 +28,8 @@ class ConsoleContainer:
                        'N64': 350, 'PlayStation': 140, 'Saturn': 410,
                        'Dreamcast': 460, 'GameCube': 200, 'PlayStation_2': 110,
                        'Xbox': 220, 'GB': 160, 'Game_Gear': 300, 'Lynx': 475,
-                       'GBC': 200, 'Neo-Geo_Pocket': 400, 'Virtual_Boy': 1100,
-                       'WonderSwan': 235, 'GBA': 170, 'Neo-Geo_Pocket_Color': 440,
+                       'GBC': 200, 'Neo_Geo_Pocket': 400, 'Virtual_Boy': 1100,
+                       'WonderSwan': 235, 'GBA': 170, 'Neo_Geo_Pocket_Color': 440,
                        'N-Gage': 250}
 
         # dict of console and current number of points "console: points"
