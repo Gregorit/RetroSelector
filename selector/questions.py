@@ -27,7 +27,7 @@ def questions():
     best_choice = manage.max_points_console()
     os.system('cls' if os.name == 'nt' else 'clear')
 
-    if best_choice is None:
+    if best_choice is 'None':
         print("Niestety nie możemy ci zaproponować konsoli. Twój budżet jest za niski.")
     else:
         # printing informations about console using data from json file
@@ -568,5 +568,5 @@ def budget_question():
     # jeżeli tak -> losowanie konsoli
 
     # WYMAGA NAPRAWY :<
-    if manage.console_points is False:
+    if not manage.console_points:
         manage.console_points['None'] = None
