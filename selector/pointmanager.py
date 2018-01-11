@@ -64,6 +64,7 @@ class ConsoleContainer:
     # returns name of console with maximum amount of points collected.
     def max_points_console(self):
         max_console = max(self.console_points, key=self.console_points.get)
+        return max_console
 
     # flagging mismatched consoles by selecting an answer about console generation
     def flag_by_gen(self, console):
