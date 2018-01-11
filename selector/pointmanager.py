@@ -22,16 +22,6 @@ class ConsoleContainer:
 
         self.consoles = self.stationary + self.portable
 
-        self.prices = {'7800': 480, 'Master_System': 120, 'NES': 320,
-                       'Mega_Drive': 175, 'Neo_Geo': 2000, 'SNES': 260,
-                       'TurboGrafx_16': 550, '3DO': 730, 'Jaguar': 1430,
-                       'N64': 350, 'PlayStation': 140, 'Saturn': 410,
-                       'Dreamcast': 460, 'GameCube': 200, 'PlayStation_2': 110,
-                       'Xbox': 220, 'GB': 160, 'Game_Gear': 340, 'Lynx': 475,
-                       'GBC': 200, 'Neo_Geo_Pocket': 400, 'Virtual_Boy': 1100,
-                       'WonderSwan': 235, 'GBA': 170, 'Neo_Geo_Pocket_Color': 440,
-                       'N-Gage': 250}
-
         # dict of console and current number of points "console: points"
         self.console_points = {}
 
@@ -74,7 +64,6 @@ class ConsoleContainer:
     # returns name of console with maximum amount of points collected.
     def max_points_console(self):
         max_console = max(self.console_points, key=self.console_points.get)
-        return max_console
 
     # flagging mismatched consoles by selecting an answer about console generation
     def flag_by_gen(self, console):
