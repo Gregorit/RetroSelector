@@ -4,575 +4,444 @@
     "manufacturer": "Atari",
     "generation": "III generacja",
     "retail_years": "1986 - 1992",
-
     "type": "stacjonarna",
     "graphic": "2D",
     "media": "kartridż",
-
     "library_number": "59",
     "exclusives_number": "",
-
     "rarity": "rzadka",
     "price": "480",
     "games_price": "",
-
     "other_models": "brak",
     "read_more": "https://goo.gl/Tfg87s"
   },
-  
   "Master_System": {
     "name": "Sega Master System",
     "manufacturer": "Sega",
     "generation": "III generacja",
     "retail_years": "1985 - 1992",
-
     "type": "stacjonarna",
     "graphic": "2D",
     "media": "kartridż",
-
     "library_number": "341",
     "exclusives_number": "",
-
     "rarity": "powszechna",
     "price": "120",
     "games_price": "",
-
     "other_models": "SG-3000, Master System II",
     "read_more": "https://goo.gl/YyfvXA"
   },
-  
   "NES": {
     "name": "Nintendo Entertainment System",
     "manufacturer": "Nintendo",
     "generation": "III generacja",
     "retail_years": "1983 - 2003",
-
     "type": "stacjonarna",
     "graphic": "2D",
     "media": "kartridż",
-
     "library_number": "714",
     "exclusives_number": "",
-
     "rarity": "powszechna",
     "price": "320",
     "games_price": "",
-
     "other_models": "NES-101, Famicom, Sharp Twin Famicom, Sharp C1 NES TV",
     "read_more": "https://goo.gl/HofyjS"
   },
-  
   "Mega_Drive": {
     "name": "Sega Mega Drive",
     "manufacturer": "Sega",
     "generation": "IV generacja",
     "retail_years": "1988 - 1997",
-
     "type": "stacjonarna",
     "graphic": "2D",
     "media": "kartridż",
-
     "library_number": "897",
     "exclusives_number": "",
-
     "rarity": "powszechna",
     "price": "175",
     "games_price": "",
-
     "other_models": "Mega Drive II, Mega Drive 3, CDX, Nomad, Teradrive, Wondermega",
     "read_more": "https://goo.gl/92p0ll"
   },
-  
   "Neo_Geo": {
     "name": "Neo Geo (AES)",
     "manufacturer": "SNK",
     "generation": "IV generacja",
     "retail_years": "1990 - 1997",
-
     "type": "stacjonarna",
     "graphic": "2D",
     "media": "kartridż/CD",
-
     "library_number": "148",
     "exclusives_number": "",
-
     "rarity": "bardzo rzadka",
     "price": "2000",
     "games_price": "",
-
     "other_models": "Neo Geo CD, Neo Geo CDZ",
     "read_more": "https://goo.gl/fGYPM1"
   },
-  
   "SNES": {
     "name": "Super Nintendo Entertainment System",
     "manufacturer": "Nintendo",
     "generation": "IV generacja",
     "retail_years": "1990 - 2003",
-
     "type": "stacjonarna",
     "graphic": "2D",
     "media": "kartridż",
-
     "library_number": "783",
     "exclusives_number": "",
-
     "rarity": "powszechna",
     "price": "260",
     "games_price": "",
-
     "other_models": "brak",
     "read_more": "https://goo.gl/Du9Q9Y"
   },
-  
   "TurboGrafx_16": {
     "name": "TurboGrafx-16",
     "manufacturer": "NEC Corporation",
     "generation": "IV generacja",
     "retail_years": "1987 - 1994",
-
     "type": "stacjonarna",
     "graphic": "2D",
     "media": "kartridż w formie karty (HuCard)",
-
     "library_number": "138",
     "exclusives_number": "",
-
     "rarity": "rzadka",
     "price": "550",
     "games_price": "",
-
     "other_models": "PC Engine",
     "read_more": "https://goo.gl/k4BEb5"
   },
-  
   "3DO": {
     "name": "3DO (Panasonic FZ-1)",
     "manufacturer": "Na licencji EA: Panasonic, Goldstar, Sanyo, Creative",
     "generation": "V generacja",
     "retail_years": "1993 - 1996",
-
     "type": "stacjonarna",
     "graphic": "3D",
     "media": "CD",
-
     "library_number": "286",
     "exclusives_number": "",
-
     "rarity": "rzadka",
     "price": "730",
     "games_price": "",
-
     "other_models": "Panasonic: FZ-10, N-1005; Goldstar: GDO-101, GDO-101M, GDO-203P, Sanyo IMP-21J, Creative 3DO Blaster",
     "read_more": "https://goo.gl/9wZeBk"
   },
-  
   "Jaguar": {
     "name": "Atari Jaguar",
     "manufacturer": "Na licencji Atari: IBM",
     "generation": "V generacja",
     "retail_years": "1993 - 1996",
-
     "type": "stacjonarna",
     "graphic": "3D",
     "media": "kartridż",
-
     "library_number": "82",
     "exclusives_number": "",
-
     "rarity": "bardzo rzadka",
     "price": "1430",
     "games_price": "430",
-
     "other_models": "brak",
     "read_more": "https://goo.gl/WM0ghq"
   },
-  
   "N64": {
     "name": "Nintendo 64",
     "manufacturer": "Nintendo",
     "generation": "V generacja",
     "retail_years": "1996 - 2003",
-
     "type": "stacjonarna",
     "graphic": "3D",
     "media": "kartridż",
-
     "library_number": "388",
     "exclusives_number": "",
-
     "rarity": "powszechna",
     "price": "350",
     "games_price": "",
-
     "other_models": "brak",
     "read_more": "https://goo.gl/SPwXfx"
   },
-  
   "PlayStation": {
     "name": "PlayStation",
     "manufacturer": "Sony",
     "generation": "V generacja",
     "retail_years": "1994 - 2006",
-
     "type": "stacjonarna",
     "graphic": "3D",
     "media": "CD",
-
     "library_number": "2515",
     "exclusives_number": "",
-
     "rarity": "powszechna",
     "price": "140",
     "games_price": "60",
-
     "other_models": "PSOne",
     "read_more": "https://goo.gl/G9Bupm"
   },
-  
   "Saturn": {
     "name": "Sega Saturn",
     "manufacturer": "Sega",
     "generation": "V generacja",
     "retail_years": "1994 - 2000",
-
     "type": "stacjonarna",
     "graphic": "3D",
     "media": "CD",
-
     "library_number": "597",
     "exclusives_number": "",
-
     "rarity": "powszechna",
     "price": "410",
     "games_price": "",
-
     "other_models": "brak",
     "read_more": "https://goo.gl/rZHUOT"
   },
-  
   "Dreamcast": {
     "name": "Dreamcast",
     "manufacturer": "Sega",
     "generation": "VI generacja",
     "retail_years": "1998 - 2001",
-
     "type": "stacjonarna",
     "graphic": "3D",
     "media": "CD",
-
     "library_number": "636",
     "exclusives_number": "267",
-
     "rarity": "powszechna",
     "price": "460",
     "games_price": "",
-
     "other_models": "Divers 2000 CX-1",
     "read_more": "https://goo.gl/PZEWUp"
   },
-
   "GameCube": {
     "name": "GameCube",
     "manufacturer": "Nintendo",
     "generation": "VI generacja",
     "retail_years": "2001 - 2007",
-
     "type": "stacjonarna",
     "graphic": "3D",
     "media": "miniDVD",
-
     "library_number": "661",
     "exclusives_number": "119",
-
     "rarity": "powszechna",
     "price": "200",
     "games_price": "",
-
     "other_models": "Panasonic Q",
     "read_more": "https://goo.gl/v0TEh6"
   },
-  
   "PlayStation_2": {
     "name": "PlayStation 2",
     "manufacturer": "Sony",
     "generation": "VI generacja",
     "retail_years": "2000 - 2013",
-
     "type": "stacjonarna",
     "graphic": "3D",
     "media": "DVD",
-
     "library_number": "2519",
     "exclusives_number": "",
-
     "rarity": "powszechna",
     "price": "110",
     "games_price": "40",
-
     "other_models": "PlayStation 2 Slim, Bravia KDL-22PX300",
     "read_more": "https://goo.gl/vNNUyq"
   },
-  
   "Xbox": {
     "name": "Xbox",
     "manufacturer": "Na licencji Microsoft: Flextronics",
     "generation": "VI generacja",
     "retail_years": "2001 - 2009",
-
     "type": "stacjonarna",
     "graphic": "3D",
     "media": "DVD",
-
     "library_number": "1045",
     "exclusives_number": "143",
-
     "rarity": "powszechna",
     "price": "220",
     "games_price": "",
-
     "other_models": "brak",
     "read_more": "https://goo.gl/175Wim"
   },
-  
-  
-  
   "GB": {
     "name": "Game Boy",
     "manufacturer": "Nintendo",
     "generation": "IV generacja",
     "retail_years": "1989 - 2003",
-
     "type": "przenośna",
     "screen": "monochromatyczny",
     "light": "*nie",
     "media": "kartridż",
     "playtime": "15-30 godzin",
     "power": "Classic: 4xAA, Pocket: 2xAAA",
-
     "library_number": "1049",
     "exclusives_number": "",
-
     "rarity": "powszechna",
     "price": "160",
     "games_price": "",
-
     "other_models": "Game Boy Pocket, *Game Boy Light (ma podświetlenie)",
     "read_more": "https://goo.gl/noci0m"
   },
-  
   "Game_Gear": {
     "name": "Sega Game Gear",
     "manufacturer": "Sega",
     "generation": "IV generacja",
     "retail_years": "1990 - 2001",
-
     "type": "przenośna",
     "screen": "kolorowy",
     "light": "tak",
     "media": "kartridż",
     "playtime": "3-5 godzin",
     "power": "6xAA",
-
     "library_number": "363",
     "exclusives_number": "",
-
     "rarity": "powszechna",
     "price": "340",
     "games_price": "",
-
     "other_models": "brak",
     "read_more": "https://goo.gl/yPagP4"
   },
-  
   "Lynx": {
     "name": "Atari Lynx",
     "manufacturer": "Atari",
     "generation": "IV generacja",
     "retail_years": "1989 - 1995",
-
     "type": "przenośna",
     "screen": "kolorowy",
     "light": "tak",
     "media": "kartridż",
     "playtime": "Lynx I: 4-5 godzin, Lynx II: 5-6 godzin",
     "power": "6xAA",
-
     "library_number": "74",
     "exclusives_number": "",
-
     "rarity": "rzadka",
     "price": "475",
     "games_price": "",
-
     "other_models": "Atari Lynx II",
     "read_more": "https://goo.gl/4q6KC2"
   },
-  
   "GBC": {
     "name": "Game Boy Color",
     "manufacturer": "Nintendo",
     "generation": "V generacja",
     "retail_years": "1998 - 2003",
-
     "type": "przenośna",
     "screen": "kolorowy",
     "light": "nie",
     "media": "kartridż",
     "playtime": "do 30 godzin",
     "power": "2xAA",
-
     "library_number": "581",
     "exclusives_number": "",
-
     "rarity": "powszechna",
     "price": "200",
     "games_price": "",
-
     "other_models": "brak",
     "read_more": "https://goo.gl/1lxbo0"
   },
-  
   "Neo_Geo_Pocket": {
     "name": "Neo Geo Pocket",
     "manufacturer": "SNK",
     "generation": "V generacja",
     "retail_years": "1998 - 1999",
-
     "type": "przenośna",
     "screen": "monochromatyczny",
     "light": "nie",
     "media": "kartridż",
     "playtime": "do 40 godzin",
     "power": "2xAAA",
-
     "library_number": "około 70",
     "exclusives_number": "",
-
     "rarity": "rzadka",
     "price": "400",
     "games_price": "",
-
     "other_models": "brak",
     "read_more": "https://goo.gl/8fn2FV"
   },
-  
   "Virtual_Boy": {
     "name": "Virtual Boy",
     "manufacturer": "Nintendo",
     "generation": "V generacja",
     "retail_years": "1995 - 1996",
-
-    "type": "przenośna (niezupełnie)",
+    "type": "przenośna",
     "screen": "monochromatyczny x2",
     "light": "tak",
     "media": "kartridż",
     "playtime": "do 4 godzin",
     "power": "6xAA",
-
     "library_number": "22",
     "exclusives_number": "",
-
     "rarity": "bardzo rzadka",
     "price": "1100",
     "games_price": "",
-
     "other_models": "brak",
     "read_more": "https://goo.gl/h8SI4b"
   },
-  
   "WonderSwan": {
     "name": "WonderSwan",
     "manufacturer": "Bandai",
     "generation": "V generacja",
     "retail_years": "1999 - 2003",
-
     "type": "przenośna",
     "screen": "WS: monochromatyczny lub WS Color/SC: kolorowy",
     "light": "nie",
     "media": "kartridż",
     "playtime": "WS: 40 godzin, WS Color: 20 godzin, SC: 15 godzin",
     "power": "1xAA",
-
     "library_number": "216 (WS: 114, WS Color/SC: 102)",
     "exclusives_number": "",
-
     "rarity": "powszechna",
     "price": "235",
     "games_price": "",
-
     "other_models": "WonderSwan Color, SwanCrystal",
     "read_more": "https://goo.gl/zhj8wm"
   },
-  
   "GBA": {
     "name": "Game Boy Advance",
     "manufacturer": "Nintendo",
     "generation": "VI generacja",
     "retail_years": "2001 - 2010",
-
     "type": "przenośna",
     "screen": "kolorowy",
     "light": "zależne od wersji",
     "media": "kartridż",
     "playtime": "około 15 godzin",
     "power": "2xAA lub akumulator",
-
     "library_number": "1233",
     "exclusives_number": "",
-
     "rarity": "powszechna",
     "price": "170",
     "games_price": "",
-
     "other_models": "Game Boy Advance SP, Game Boy Micro",
     "read_more": "https://goo.gl/vx9LrK"
   },
-  
   "Neo_Geo_Pocket_Color": {
     "name": "Neo Geo Pocket Color",
     "manufacturer": "SNK",
     "generation": "VI generacja",
     "retail_years": "1999 - 2001",
-
     "type": "przenośna",
     "screen": "kolorowy",
     "light": "nie",
     "media": "kartridż",
     "playtime": "do 40 godzin",
     "power": "2xAA",
-
     "library_number": "83",
     "exclusives_number": "",
-
     "rarity": "rzadka",
     "price": "440",
     "games_price": "",
-
     "other_models": "brak",
     "read_more": "https://goo.gl/3VypjT"
   },
-  
   "N-Gage": {
     "name": "N-Gage",
     "manufacturer": "Nokia",
     "generation": "VI generacja",
     "retail_years": "2003 - 2005",
-
-    "type": "przenośna (konsolofon)",
+    "type": "przenośna",
     "screen": "kolorowy (portretowy)",
     "light": "tak",
     "media": "karta pamięci",
     "playtime": "do 4 godzin",
     "power": "akumulator",
-
     "library_number": "58",
     "exclusives_number": "",
-
     "rarity": "rzadka",
     "price": "250",
     "games_price": "",
-
     "other_models": "N-Gage QD",
     "read_more": "https://goo.gl/EwIxOA"
   }
