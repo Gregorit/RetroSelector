@@ -38,7 +38,7 @@ class ConsoleContainer:
             if data[key]['type'] == 'stacjonarna':
                 self.stationary.append(key)
             elif data[key]['type'] == 'przenośna':
-                self.stationary.append(key)
+                self.portable.append(key)
 
         self.consoles = self.stationary + self.portable
 
