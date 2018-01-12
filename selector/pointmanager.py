@@ -1,24 +1,44 @@
+import json
+
+
+def json_loader():
+    json_file = open('selector/consoles.json', encoding="utf-8")
+    json_data = json.load(json_file)
+    json_file.close()
+    return json_data
+
+
 class ConsoleContainer:
     '''
     Klasa przechowująca konsole. Pozwala na zbieranie punktow
     i następnie okresla konsolę, ktora zdobyla ich najwiecej.
     '''
-    def __init__(self):
-        self.gen3 = ['7800', 'Master_System', 'NES']
-        self.gen4 = ['Mega_Drive', 'Neo_Geo', 'SNES', 'TurboGrafx_16',
-                     'GB', 'Game_Gear', 'Lynx']
-        self.gen5 = ['3DO', 'Jaguar', 'N64', 'PlayStation', 'Saturn',
-                     'GBC', 'Neo_Geo_Pocket', 'Virtual_Boy', 'WonderSwan']
-        self.gen6 = ['Dreamcast', 'GameCube', 'PlayStation_2', 'Xbox',
-                     'GBA', 'Neo_Geo_Pocket_Color', 'N-Gage']
 
-        self.stationary = ['7800', 'Master_System', 'NES', 'Mega_Drive',
-                           'Neo_Geo', 'SNES', 'TurboGrafx_16', '3DO', 'Jaguar',
-                           'N64', 'PlayStation', 'Saturn', 'Dreamcast',
-                           'GameCube', 'PlayStation_2', 'Xbox']
-        self.portable = ['GB', 'Game_Gear', 'Lynx', 'GBC', 'Neo_Geo_Pocket',
-                         'Virtual_Boy', 'WonderSwan', 'GBA',
-                         'Neo_Geo_Pocket_Color', 'N-Gage']
+    def __init__(self):
+        data = json_loader()
+
+        self.gen3 = []
+        self.gen4 = []
+        self.gen5 = []
+        self.gen6 = []
+        self.stationary = []
+        self.portable = []
+
+        # completion generations and types lists from json data
+        for key in data:
+            if data[key]['generation'] == 'III generacja':
+                self.gen3.append(key)
+            elif data[key]['generation'] == 'IV generacja':
+                self.gen4.append(key)
+            elif data[key]['generation'] == 'V generacja':
+                self.gen5.append(key)
+            elif data[key]['generation'] == 'VI generacja':
+                self.gen6.append(key)
+
+            if data[key]['type'] == 'stacjonarna':
+                self.stationary.append(key)
+            elif data[key]['type'] == 'przenośna':
+                self.stationary.append(key)
 
         self.consoles = self.stationary + self.portable
 
