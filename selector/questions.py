@@ -1,10 +1,3 @@
-'''
-To będzie plik do wykonywania ciągu pytań i naliczania punktów
-'''
-
-# zastanawiam się na przyznawaniu 50% punktów konsolom, które nie spełniają
-# wymagań wybranych w odpowiedziach
-
 import os
 from .pointmanager import ConsoleContainer, json_loader
 
@@ -137,6 +130,8 @@ def generation_question():
     game_genre_question(choice)
 
 
+# możliwa redukcja opcji, poprzez brak którejś kategorii uważanej za najpopularniejszą
+# na danej konsoli
 def game_genre_question(gen_choice):
     print('***')
     print('Jaki gatunek gier preferujesz najbardziej?')
@@ -275,7 +270,7 @@ def online_multi_question():
                data[key]['online'] == 'active':
                 manage.add_points(key, 1)
 
-    exclusive_games_question()
+    games_library_question()
 
 
 def graphic_colors_question():
@@ -390,18 +385,6 @@ def local_multi_question():
     print('***')
 
     choice = choice_and_clear(3)
-
-    exclusive_games_question()
-
-
-def exclusive_games_question():
-    print('***')
-    print('Czy ma znaczenie dla ciebie ilość gier ekskluzywnych?')
-    print('(1) tak')
-    print('(2) nie')
-    print('***')
-
-    choice = choice_and_clear(2)
 
     games_library_question()
 
