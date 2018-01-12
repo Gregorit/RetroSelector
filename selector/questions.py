@@ -6,18 +6,9 @@ To będzie plik do wykonywania ciągu pytań i naliczania punktów
 # wymagań wybranych w odpowiedziach
 
 import os
-import random
-import json
-from .pointmanager import ConsoleContainer
+from .pointmanager import ConsoleContainer, json_loader
 
 manage = ConsoleContainer()
-
-
-def json_loader():
-    json_file = open('selector/consoles.json', encoding="utf-8")
-    json_data = json.load(json_file)
-    json_file.close()
-    return json_data
 
 
 def questions():
@@ -36,44 +27,68 @@ def questions():
         if best_choice in manage.stationary:
             print('-----------------------------------------')
             print(data[best_choice]['name'])
-            print('\n    Producent: {}'.format(data[best_choice]['manufacturer']))
-            print('    Generacja: {}'.format(data[best_choice]['generation']))
-            print('    Lata sprzedaży: {}\n'.format(data[best_choice]['retail_years']))
-            print('    Rodzaj konsoli: {}'.format(data[best_choice]['type']))
-            print('    Grafika: {}'.format(data[best_choice]['graphic']))
-            print('    Nośnik: {}\n'.format(data[best_choice]['media']))
-            print('    Ilość gier: {}'.format(data[best_choice]['library_number']))
-            print('    Ilość exclusive\'ów: {}\n'
-                  .format(data[best_choice]['exclusives_number']))
-            print('    Aktualna dostępność: {}'.format(data[best_choice]['rarity']))
-            print('    Aktualna cena sprzętu: około {} PLN'
-                  .format(data[best_choice]['price']))
-            print('    Aktualne ceny gier: około {} PLN\n'
-                  .format(data[best_choice]['games_price']))
-            print('Inne modele: {}'.format(data[best_choice]['other_models']))
-            print('Przeczytaj więcej: {}'.format(data[best_choice]['read_more']))
+            print('\n    Producent: {}'
+                  '\n    Generacja: {}'
+                  '\n    Lata sprzedaży: {}\n'
+                  '\n    Rodzaj konsoli: {}'
+                  '\n    Grafika: {}'
+                  '\n    Nośnik: {}\n'
+                  '\n    Ilość gier: {}'
+                  '\n    Ilość exclusive\'ów: {}\n'
+                  '\n    Aktualna dostępność: {}'
+                  '\n    Aktualna cena sprzętu: około {} PLN'
+                  '\n    Aktualne ceny gier: około {} PLN\n'
+                  '\nInne modele: {}'
+                  '\nPrzeczytaj więcej: {}'
+                  .format(data[best_choice]['manufacturer'],
+                          data[best_choice]['generation'],
+                          data[best_choice]['retail_years'],
+                          data[best_choice]['type'],
+                          data[best_choice]['graphic'],
+                          data[best_choice]['media'],
+                          data[best_choice]['library_number'],
+                          data[best_choice]['exclusives_number'],
+                          data[best_choice]['rarity'],
+                          data[best_choice]['price'],
+                          data[best_choice]['games_price'],
+                          data[best_choice]['other_models'],
+                          data[best_choice]['read_more']))
+
         elif best_choice in manage.portable:
             print('-----------------------------------------')
             print(data[best_choice]['name'])
-            print('\n    Producent: {}'.format(data[best_choice]['manufacturer']))
-            print('    Generacja: {}'.format(data[best_choice]['generation']))
-            print('    Lata sprzedaży: {}\n'.format(data[best_choice]['retail_years']))
-            print('    Rodzaj konsoli: {}'.format(data[best_choice]['type']))
-            print('    Rodzaj ekranu: {}'.format(data[best_choice]['screen']))
-            print('    Podświetlenie ekranu: {}'.format(data[best_choice]['light']))
-            print('    Nośnik: {}'.format(data[best_choice]['media']))
-            print('    Czas gry: {}'.format(data[best_choice]['playtime']))
-            print('    Zasilanie: {}\n'.format(data[best_choice]['power']))
-            print('    Ilość gier: {}'.format(data[best_choice]['library_number']))
-            print('    Ilość exclusive\'ów: {}\n'
-                  .format(data[best_choice]['exclusives_number']))
-            print('    Aktualna dostępność: {}'.format(data[best_choice]['rarity']))
-            print('    Aktualna cena sprzętu: około {} PLN'
-                  .format(data[best_choice]['price']))
-            print('    Aktualne ceny gier: około {} PLN\n'
-                  .format(data[best_choice]['games_price']))
-            print('Inne modele: {}'.format(data[best_choice]['other_models']))
-            print('Przeczytaj więcej: {}'.format(data[best_choice]['read_more']))
+            print('\n    Producent: {}'
+                  '\n    Generacja: {}'
+                  '\n    Lata sprzedaży: {}\n'
+                  '\n    Rodzaj konsoli: {}'
+                  '\n    Rodzaj ekranu: {}'
+                  '\n    Podświetlenie ekranu: {}'
+                  '\n    Nośnik: {}'
+                  '\n    Czas gry: {}'
+                  '\n    Zasilanie: {}\n'
+                  '\n    Ilość gier: {}'
+                  '\n    Ilość exclusive\'ów: {}\n'
+                  '\n    Aktualna dostępność: {}'
+                  '\n    Aktualna cena sprzętu: około {} PLN'
+                  '\n    Aktualne ceny gier: około {} PLN\n'
+                  '\nInne modele: {}'
+                  '\nPrzeczytaj więcej: {}'
+                  .format(data[best_choice]['manufacturer'],
+                          data[best_choice]['generation'],
+                          data[best_choice]['retail_years'],
+                          data[best_choice]['type'],
+                          data[best_choice]['screen'],
+                          data[best_choice]['light'],
+                          data[best_choice]['media'],
+                          data[best_choice]['playtime'],
+                          data[best_choice]['power'],
+                          data[best_choice]['library_number'],
+                          data[best_choice]['exclusives_number'],
+                          data[best_choice]['rarity'],
+                          data[best_choice]['price'],
+                          data[best_choice]['games_price'],
+                          data[best_choice]['other_models'],
+                          data[best_choice]['read_more']))
 
     # cleaning and restoration of lists and dictionaries in pointmanager.py
     manage.consoles = manage.stationary + manage.portable
@@ -563,10 +578,5 @@ def budget_question():
         if data[key]['price'] > budget:
             del manage.console_points[key]
 
-    # tu pętla sprawdzająca jest więcej niż jedna konsola posiadająca
-    # najwięcej punktów
-    # jeżeli tak -> losowanie konsoli
-
-    # WYMAGA NAPRAWY :<
     if not manage.console_points:
         manage.console_points['None'] = None
