@@ -13,7 +13,10 @@
     "price": "480",
     "games_price": "",
     "other_models": "brak",
-    "read_more": "https://goo.gl/Tfg87s"
+    "read_more": "https://goo.gl/Tfg87s",
+    "online": "not available",
+    "extra_functions": "no",
+    "popularity": "popular"
   },
   "Master_System": {
     "name": "Sega Master System",
@@ -29,7 +32,10 @@
     "price": "120",
     "games_price": "",
     "other_models": "SG-3000, Master System II",
-    "read_more": "https://goo.gl/YyfvXA"
+    "read_more": "https://goo.gl/YyfvXA",
+    "online": "not available",
+    "extra_functions": "no",
+    "popularity": "popular"
   },
   "NES": {
     "name": "Nintendo Entertainment System",
@@ -45,7 +51,10 @@
     "price": "320",
     "games_price": "",
     "other_models": "NES-101, Famicom, Sharp Twin Famicom, Sharp C1 NES TV",
-    "read_more": "https://goo.gl/HofyjS"
+    "read_more": "https://goo.gl/HofyjS",
+    "online": "not available",
+    "extra_functions": "no",
+    "popularity": "most popular"
   },
   "Mega_Drive": {
     "name": "Sega Mega Drive",
@@ -61,7 +70,10 @@
     "price": "175",
     "games_price": "",
     "other_models": "Mega Drive II, Mega Drive 3, CDX, Nomad, Teradrive, Wondermega",
-    "read_more": "https://goo.gl/92p0ll"
+    "read_more": "https://goo.gl/92p0ll",
+    "online": "not available",
+    "extra_functions": "no",
+    "popularity": "most popular"
   },
   "Neo_Geo": {
     "name": "Neo Geo (AES)",
@@ -77,7 +89,10 @@
     "price": "2000",
     "games_price": "",
     "other_models": "Neo Geo CD, Neo Geo CDZ",
-    "read_more": "https://goo.gl/fGYPM1"
+    "read_more": "https://goo.gl/fGYPM1",
+    "online": "not available",
+    "extra_functions": "no",
+    "popularity": "not popular"
   },
   "SNES": {
     "name": "Super Nintendo Entertainment System",
@@ -93,7 +108,10 @@
     "price": "260",
     "games_price": "",
     "other_models": "brak",
-    "read_more": "https://goo.gl/Du9Q9Y"
+    "read_more": "https://goo.gl/Du9Q9Y",
+    "online": "not available",
+    "extra_functions": "no",
+    "popularity": "most popular"
   },
   "TurboGrafx_16": {
     "name": "TurboGrafx-16",
@@ -102,14 +120,17 @@
     "retail_years": "1987 - 1994",
     "type": "stacjonarna",
     "graphic": "2D",
-    "media": "kartridż w formie karty (HuCard)",
+    "media": "kartridż",
     "library_number": "138",
     "exclusives_number": "",
     "rarity": "rzadka",
     "price": "550",
     "games_price": "",
     "other_models": "PC Engine",
-    "read_more": "https://goo.gl/k4BEb5"
+    "read_more": "https://goo.gl/k4BEb5",
+    "online": "not available",
+    "extra_functions": "no",
+    "popularity": "popular"
   },
   "3DO": {
     "name": "3DO (Panasonic FZ-1)",
@@ -125,7 +146,10 @@
     "price": "730",
     "games_price": "",
     "other_models": "Panasonic: FZ-10, N-1005; Goldstar: GDO-101, GDO-101M, GDO-203P, Sanyo IMP-21J, Creative 3DO Blaster",
-    "read_more": "https://goo.gl/9wZeBk"
+    "read_more": "https://goo.gl/9wZeBk",
+    "online": "not available",
+    "extra_functions": "no",
+    "popularity": "not popular"
   },
   "Jaguar": {
     "name": "Atari Jaguar",
@@ -141,7 +165,10 @@
     "price": "1430",
     "games_price": "430",
     "other_models": "brak",
-    "read_more": "https://goo.gl/WM0ghq"
+    "read_more": "https://goo.gl/WM0ghq",
+    "online": "not available",
+    "extra_functions": "no",
+    "popularity": "not popular"
   },
   "N64": {
     "name": "Nintendo 64",
@@ -157,7 +184,10 @@
     "price": "350",
     "games_price": "",
     "other_models": "brak",
-    "read_more": "https://goo.gl/SPwXfx"
+    "read_more": "https://goo.gl/SPwXfx",
+    "online": "not available",
+    "extra_functions": "no",
+    "popularity": "popular"
   },
   "PlayStation": {
     "name": "PlayStation",
@@ -173,7 +203,10 @@
     "price": "140",
     "games_price": "60",
     "other_models": "PSOne",
-    "read_more": "https://goo.gl/G9Bupm"
+    "read_more": "https://goo.gl/G9Bupm",
+    "online": "not available",
+    "extra_functions": "yes",
+    "popularity": "most popular"
   },
   "Saturn": {
     "name": "Sega Saturn",
@@ -189,7 +222,10 @@
     "price": "410",
     "games_price": "",
     "other_models": "brak",
-    "read_more": "https://goo.gl/rZHUOT"
+    "read_more": "https://goo.gl/rZHUOT",
+    "online": "active",
+    "extra_functions": "yes",
+    "popularity": "not popular"
   },
   "Dreamcast": {
     "name": "Dreamcast",
@@ -205,7 +241,10 @@
     "price": "460",
     "games_price": "",
     "other_models": "Divers 2000 CX-1",
-    "read_more": "https://goo.gl/PZEWUp"
+    "read_more": "https://goo.gl/PZEWUp",
+    "online": "active",
+    "extra_functions": "yes",
+    "popularity": "not popular"
   },
   "GameCube": {
     "name": "GameCube",
@@ -221,7 +260,10 @@
     "price": "200",
     "games_price": "",
     "other_models": "Panasonic Q",
-    "read_more": "https://goo.gl/v0TEh6"
+    "read_more": "https://goo.gl/v0TEh6",
+    "online": "active",
+    "extra_functions": "no",
+    "popularity": "popular"
   },
   "PlayStation_2": {
     "name": "PlayStation 2",
@@ -237,7 +279,10 @@
     "price": "110",
     "games_price": "40",
     "other_models": "PlayStation 2 Slim, Bravia KDL-22PX300",
-    "read_more": "https://goo.gl/vNNUyq"
+    "read_more": "https://goo.gl/vNNUyq",
+    "online": "active",
+    "extra_functions": "yes",
+    "popularity": "most popular"
   },
   "Xbox": {
     "name": "Xbox",
@@ -253,7 +298,10 @@
     "price": "220",
     "games_price": "",
     "other_models": "brak",
-    "read_more": "https://goo.gl/175Wim"
+    "read_more": "https://goo.gl/175Wim",
+    "online": "active",
+    "extra_functions": "yes",
+    "popularity": "popular"
   },
   "GB": {
     "name": "Game Boy",
@@ -262,7 +310,7 @@
     "retail_years": "1989 - 2003",
     "type": "przenośna",
     "screen": "monochromatyczny",
-    "light": "*nie",
+    "light": "nie",
     "media": "kartridż",
     "playtime": "15-30 godzin",
     "power": "Classic: 4xAA, Pocket: 2xAAA",
@@ -271,8 +319,12 @@
     "rarity": "powszechna",
     "price": "160",
     "games_price": "",
-    "other_models": "Game Boy Pocket, *Game Boy Light (ma podświetlenie)",
-    "read_more": "https://goo.gl/noci0m"
+    "other_models": "Game Boy Pocket, Game Boy Light (ma podświetlenie)",
+    "read_more": "https://goo.gl/noci0m",
+    "playtime_in_words": "long",
+    "power_type": "battery",
+    "extra_functions": "no",
+    "popularity": "most popular"
   },
   "Game_Gear": {
     "name": "Sega Game Gear",
@@ -291,7 +343,11 @@
     "price": "340",
     "games_price": "",
     "other_models": "brak",
-    "read_more": "https://goo.gl/yPagP4"
+    "read_more": "https://goo.gl/yPagP4",
+    "playtime_in_words": "short",
+    "power_type": "battery",
+    "extra_functions": "no",
+    "popularity": "popular"
   },
   "Lynx": {
     "name": "Atari Lynx",
@@ -310,7 +366,11 @@
     "price": "475",
     "games_price": "",
     "other_models": "Atari Lynx II",
-    "read_more": "https://goo.gl/4q6KC2"
+    "read_more": "https://goo.gl/4q6KC2",
+    "playtime_in_words": "short",
+    "power_type": "battery",
+    "extra_functions": "no",
+    "popularity": "not popular"
   },
   "GBC": {
     "name": "Game Boy Color",
@@ -329,7 +389,11 @@
     "price": "200",
     "games_price": "",
     "other_models": "brak",
-    "read_more": "https://goo.gl/1lxbo0"
+    "read_more": "https://goo.gl/1lxbo0",
+    "playtime_in_words": "long",
+    "power_type": "battery",
+    "extra_functions": "no",
+    "popularity": "most popular"
   },
   "Neo_Geo_Pocket": {
     "name": "Neo Geo Pocket",
@@ -348,7 +412,11 @@
     "price": "400",
     "games_price": "",
     "other_models": "brak",
-    "read_more": "https://goo.gl/8fn2FV"
+    "read_more": "https://goo.gl/8fn2FV",
+    "playtime_in_words": "long",
+    "power_type": "battery",
+    "extra_functions": "no",
+    "popularity": "not popular"
   },
   "Virtual_Boy": {
     "name": "Virtual Boy",
@@ -356,7 +424,7 @@
     "generation": "V generacja",
     "retail_years": "1995 - 1996",
     "type": "przenośna",
-    "screen": "monochromatyczny x2",
+    "screen": "monochromatyczny",
     "light": "tak",
     "media": "kartridż",
     "playtime": "do 4 godzin",
@@ -367,7 +435,11 @@
     "price": "1100",
     "games_price": "",
     "other_models": "brak",
-    "read_more": "https://goo.gl/h8SI4b"
+    "read_more": "https://goo.gl/h8SI4b",
+    "playtime_in_words": "short",
+    "power_type": "battery",
+    "extra_functions": "no",
+    "popularity": "not popular"
   },
   "WonderSwan": {
     "name": "WonderSwan",
@@ -375,7 +447,7 @@
     "generation": "V generacja",
     "retail_years": "1999 - 2003",
     "type": "przenośna",
-    "screen": "WS: monochromatyczny lub WS Color/SC: kolorowy",
+    "screen": "monochromatyczny/kolorowy",
     "light": "nie",
     "media": "kartridż",
     "playtime": "WS: 40 godzin, WS Color: 20 godzin, SC: 15 godzin",
@@ -386,7 +458,11 @@
     "price": "235",
     "games_price": "",
     "other_models": "WonderSwan Color, SwanCrystal",
-    "read_more": "https://goo.gl/zhj8wm"
+    "read_more": "https://goo.gl/zhj8wm",
+    "playtime_in_words": "long",
+    "power_type": "battery",
+    "extra_functions": "no",
+    "popularity": "not popular"
   },
   "GBA": {
     "name": "Game Boy Advance",
@@ -405,7 +481,11 @@
     "price": "170",
     "games_price": "",
     "other_models": "Game Boy Advance SP, Game Boy Micro",
-    "read_more": "https://goo.gl/vx9LrK"
+    "read_more": "https://goo.gl/vx9LrK",
+    "playtime_in_words": "long",
+    "power_type": "battery/rechargeable",
+    "extra_functions": "no",
+    "popularity": "most popular"
   },
   "Neo_Geo_Pocket_Color": {
     "name": "Neo Geo Pocket Color",
@@ -424,7 +504,11 @@
     "price": "440",
     "games_price": "",
     "other_models": "brak",
-    "read_more": "https://goo.gl/3VypjT"
+    "read_more": "https://goo.gl/3VypjT",
+    "playtime_in_words": "long",
+    "power_type": "battery",
+    "extra_functions": "no",
+    "popularity": "not popular"
   },
   "N-Gage": {
     "name": "N-Gage",
@@ -432,7 +516,7 @@
     "generation": "VI generacja",
     "retail_years": "2003 - 2005",
     "type": "przenośna",
-    "screen": "kolorowy (portretowy)",
+    "screen": "kolorowy",
     "light": "tak",
     "media": "karta pamięci",
     "playtime": "do 4 godzin",
@@ -443,6 +527,10 @@
     "price": "250",
     "games_price": "",
     "other_models": "N-Gage QD",
-    "read_more": "https://goo.gl/EwIxOA"
+    "read_more": "https://goo.gl/EwIxOA",
+    "playtime_in_words": "short",
+    "power_type": "rechargeable",
+    "extra_functions": "yes",
+    "popularity": "not popular"
   }
 }
