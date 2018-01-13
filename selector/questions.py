@@ -25,9 +25,9 @@ def questions():
                   '\n    Lata sprzedaży: {}\n'
                   '\n    Rodzaj konsoli: {}'
                   '\n    Grafika: {}'
+                  '\n    Porty na kontrolery: {}'
                   '\n    Nośnik: {}\n'
-                  '\n    Ilość gier: {}'
-                  '\n    Ilość exclusive\'ów: {}\n'
+                  '\n    Ilość gier: {}\n'
                   '\n    Aktualna dostępność: {}'
                   '\n    Aktualna cena sprzętu: około {} PLN'
                   '\n    Aktualne ceny gier: około {} PLN\n'
@@ -38,9 +38,9 @@ def questions():
                           data[best_choice]['retail_years'],
                           data[best_choice]['type'],
                           data[best_choice]['graphic'],
+                          data[best_choice]['ports'],
                           data[best_choice]['media'],
                           data[best_choice]['library_number'],
-                          data[best_choice]['exclusives_number'],
                           data[best_choice]['rarity'],
                           data[best_choice]['price'],
                           data[best_choice]['games_price'],
@@ -59,8 +59,7 @@ def questions():
                   '\n    Nośnik: {}'
                   '\n    Czas gry: {}'
                   '\n    Zasilanie: {}\n'
-                  '\n    Ilość gier: {}'
-                  '\n    Ilość exclusive\'ów: {}\n'
+                  '\n    Ilość gier: {}\n'
                   '\n    Aktualna dostępność: {}'
                   '\n    Aktualna cena sprzętu: około {} PLN'
                   '\n    Aktualne ceny gier: około {} PLN\n'
@@ -76,7 +75,6 @@ def questions():
                           data[best_choice]['playtime'],
                           data[best_choice]['power'],
                           data[best_choice]['library_number'],
-                          data[best_choice]['exclusives_number'],
                           data[best_choice]['rarity'],
                           data[best_choice]['price'],
                           data[best_choice]['games_price'],
@@ -140,26 +138,19 @@ def game_genre_question(gen_choice):
     print('(3) platformówki')
     print('(4) symulacyjne')
     print('(5) RPG')
-    print('(6) beat\'em up')
-    print('(7) strzelanki')
-    print('(8) strategie')
-    print('(9) shoot\'em up')
-    print('(10) strzelanki na szynach')
-    print('(11) run & gun')
-    print('(12) wyścigowe')
-    print('(13) imprezowe')
-    print('(14) rytmiczne')
-    print('(15) puzzle')
-    print('(16) sportowe')
-    print('(17) bez znaczenia')
+    print('(6) strzelanki')
+    print('(7) strategie')
+    print('(8) wyścigowe')
+    print('(9) sportowe')
+    print('(10) bez znaczenia')
     print('***')
 
-    choice = choice_and_clear(17)
+    choice = choice_and_clear(10)
 
     # if choice is '1':
-    #     manage.add_points('NES', 2)
+    #     manage.add_points('NES', 1)
     # elif choice is '2':
-    #     manage.add_points('SNES', 2)
+    #     manage.add_points('SNES', 1)
     # [...]
 
     if gen_choice is '1':
@@ -226,7 +217,7 @@ def storage_question():
             if key in manage.stationary and \
               (data[key]['media'] == 'kartridż' or
                data[key]['media'] == 'kartridż/CD'):
-                manage.add_points(key, 1)
+                manage.add_points(key, 2)
 
     elif choice is '2':
         for key in data:
@@ -235,21 +226,40 @@ def storage_question():
                data[key]['media'] == 'CD' or
                data[key]['media'] == 'DVD' or
                data[key]['media'] == 'miniDVD'):
-                manage.add_points(key, 1)
+                manage.add_points(key, 2)
 
-    stationary_multi_question()
+    stationary_ports_question()
 
 
-def stationary_multi_question():
+# zmiania na pytanie obejmujące ilość portów w konsoli na kontrolery (bez adapterów)
+def stationary_ports_question():
     print('***')
-    print('Do ilu maksymalnie graczy przewidujesz')
-    print('grę lokalną na podzielonym ekranie?')
-    print('(1) 2')
-    print('(2) 4')
-    print('(3) nie przewiduję')
+    print('Ile portów na kontrolery powinna posiadać\n'
+          'konsola? (adaptery nie są brane pod uwagę)')
+    print('(1) 1')
+    print('(2) 2')
+    print('(3) 4')
     print('***')
 
     choice = choice_and_clear(3)
+
+    if choice is '1':
+        for key in data:
+            if key in manage.stationary and \
+               data[key]['ports'] == '1':
+                manage.add_points(key, 1)
+
+    elif choice is '2':
+        for key in data:
+            if key in manage.stationary and \
+               data[key]['ports'] == '2':
+                manage.add_points(key, 1)
+
+    elif choice is '3':
+        for key in data:
+            if key in manage.stationary and \
+               data[key]['ports'] == '3':
+                manage.add_points(key, 1)
 
     online_multi_question()
 
@@ -378,13 +388,12 @@ def display_backlight_question():
 
 def local_multi_question():
     print('***')
-    print('Do ilu maksymalnie graczy przewidujesz grę lokalną?')
-    print('(1) 2')
-    print('(2) 4')
-    print('(3) nie przewiduję')
+    print('Czy interesuje ciebie gra lokalna?')
+    print('(1) tak')
+    print('(2) nie')
     print('***')
 
-    choice = choice_and_clear(3)
+    choice = choice_and_clear(2)
 
     games_library_question()
 
@@ -399,6 +408,21 @@ def games_library_question():
     print('***')
 
     choice = choice_and_clear(4)
+
+    if choice is '1':
+        for key in data:
+            if int(data[key]['library_number']) >= 700:
+                manage.add_points(key, 2)
+
+    elif choice is '2':
+        for key in data:
+            if int(data[key]['library_number']) in range(250, 700):
+                manage.add_points(key, 2)
+
+    elif choice is '3':
+        for key in data:
+            if int(data[key]['library_number']) in range(0, 250):
+                manage.add_points(key, 2)
 
     accessories_question()
 
