@@ -2,7 +2,7 @@ import json
 
 
 def json_loader():
-    json_file = open('selector/consoles.json', encoding="utf-8")
+    json_file = open('consoles.json', encoding="utf-8")
     json_data = json.load(json_file)
     json_file.close()
     return json_data
