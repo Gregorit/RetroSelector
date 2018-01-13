@@ -18,9 +18,9 @@ def questions():
         print('Najlepszym wyborem dla Ciebie jest {}.'
               .format(data[best_choice]['name']))
         if best_choice in manage.stationary:
-            print('-----------------------------------------')
-            print(data[best_choice]['name'])
-            print('\n    Producent: {}'
+            print('-----------------------------------------\n'
+                  '{}\n'
+                  '\n    Producent: {}'
                   '\n    Generacja: {}'
                   '\n    Lata sprzedaży: {}\n'
                   '\n    Rodzaj konsoli: {}'
@@ -32,8 +32,10 @@ def questions():
                   '\n    Aktualna cena sprzętu: około {} PLN'
                   '\n    Aktualne ceny gier: około {} PLN\n'
                   '\nInne modele: {}'
-                  '\nPrzeczytaj więcej: {}'
-                  .format(data[best_choice]['manufacturer'],
+                  '\nPrzeczytaj więcej: {}\n'
+                  '-----------------------------------------'
+                  .format(data[best_choice]['name'],
+                          data[best_choice]['manufacturer'],
                           data[best_choice]['generation'],
                           data[best_choice]['retail_years'],
                           data[best_choice]['type'],
@@ -48,9 +50,9 @@ def questions():
                           data[best_choice]['read_more']))
 
         elif best_choice in manage.portable:
-            print('-----------------------------------------')
-            print(data[best_choice]['name'])
-            print('\n    Producent: {}'
+            print('-----------------------------------------\n'
+                  '{}\n'
+                  '\n    Producent: {}'
                   '\n    Generacja: {}'
                   '\n    Lata sprzedaży: {}\n'
                   '\n    Rodzaj konsoli: {}'
@@ -64,8 +66,10 @@ def questions():
                   '\n    Aktualna cena sprzętu: około {} PLN'
                   '\n    Aktualne ceny gier: około {} PLN\n'
                   '\nInne modele: {}'
-                  '\nPrzeczytaj więcej: {}'
-                  .format(data[best_choice]['manufacturer'],
+                  '\nPrzeczytaj więcej: {}\n'
+                  '-----------------------------------------'
+                  .format(data[best_choice]['name'],
+                          data[best_choice]['manufacturer'],
                           data[best_choice]['generation'],
                           data[best_choice]['retail_years'],
                           data[best_choice]['type'],
@@ -81,12 +85,11 @@ def questions():
                           data[best_choice]['other_models'],
                           data[best_choice]['read_more']))
 
-    # cleaning and restoration of lists and dictionaries in pointmanager.py
+    # cleaning and restoration of lists and dictionaries from pointmanager.py
     manage.consoles = manage.stationary + manage.portable
     manage.console_points.clear()
     for console in manage.consoles:
         manage.console_points.update({console: 0})
-
     input('\n                  Kliknij [Enter]')
 
 
@@ -94,8 +97,8 @@ def choice_and_clear(answers_number):
     choice = input('Wybór: ')
 
     if not choice.isdigit() or int(choice) not in range(1, answers_number+1):
-        print('Podano nieprawidłową odpowiedź.')
-        print('Wpisz ją jeszcze raz')
+        print('[Podano nieprawidłową odpowiedź.]\n'
+              '[Wpisz ją jeszcze raz.]')
         choice_and_clear(answers_number)
 
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -103,16 +106,17 @@ def choice_and_clear(answers_number):
 
 
 def generation_question():
-    print('***')
-    print('Czy celujesz w konkretną generację konsol?')
-    print('[UWAGA!: wybierając konkretną generację odrzucasz')
-    print('         pozostałe konsole niezgodne z wyborem]')
-    print('(1) III generacja')
-    print('(2) IV generacja')
-    print('(3) V generacja')
-    print('(4) VI generacja')
-    print('(5) nie mam konkretnej')
-    print('***')
+    print('*****************************************************\n'
+          '** Czy celujesz w konkretną generację konsol?\n'
+          '** [UWAGA!: wybierając konkretną generację odrzucasz\n'
+          '**          pozostałe konsole niezgodne z wyborem]\n'
+          '*****************************************************\n'
+          '** (1) III generacja\n'
+          '** (2) IV generacja\n'
+          '** (3) V generacja\n'
+          '** (4) VI generacja\n'
+          '** (5) nie mam konkretnej\n'
+          '*****************************************************')
 
     choice = choice_and_clear(5)
 
@@ -128,22 +132,22 @@ def generation_question():
     game_genre_question(choice)
 
 
-# możliwa redukcja opcji, poprzez brak którejś kategorii uważanej za najpopularniejszą
-# na danej konsoli
+# samemu uznać jakie kategorie są najpopularniejsze (max 2)
 def game_genre_question(gen_choice):
-    print('***')
-    print('Jaki gatunek gier preferujesz najbardziej?')
-    print('(1) gry akcji')
-    print('(2) przygodowe')
-    print('(3) platformówki')
-    print('(4) symulacyjne')
-    print('(5) RPG')
-    print('(6) strzelanki')
-    print('(7) strategie')
-    print('(8) wyścigowe')
-    print('(9) sportowe')
-    print('(10) bez znaczenia')
-    print('***')
+    print('**********************************************\n'
+          '** Jaki gatunek gier preferujesz najbardziej?\n'
+          '**********************************************\n'
+          '** (1) gry akcji\n'
+          '** (2) przygodowe\n'
+          '** (3) platformówki\n'
+          '** (4) symulacyjne\n'
+          '** (5) RPG\n'
+          '** (6) strzelanki\n'
+          '** (7) strategie\n'
+          '** (8) wyścigowe\n'
+          '** (9) sportowe\n'
+          '** (10) bez znaczenia\n'
+          '**********************************************')
 
     choice = choice_and_clear(10)
 
@@ -160,11 +164,12 @@ def game_genre_question(gen_choice):
 
 
 def console_type_question(gen_choice):
-    print('***')
-    print('Jaki rodzaj konsoli preferujesz?')
-    print('(1) stacjonarna')
-    print('(2) przenośna')
-    print('***')
+    print('*****************************************\n'
+          '** Jaki rodzaj konsoli preferujesz?\n'
+          '*****************************************\n'
+          '** (1) stacjonarna\n'
+          '** (2) przenośna\n'
+          '*****************************************')
 
     choice = choice_and_clear(2)
 
@@ -180,11 +185,12 @@ def console_type_question(gen_choice):
 
 
 def graphic_dim_question():
-    print('***')
-    print('Jaki rodzaj grafiki ma wspierać twoja konsola?')
-    print('(1) 2D')
-    print('(2) 3D')
-    print('***')
+    print('***************************************************\n'
+          '** Jaki rodzaj grafiki ma wspierać twoja konsola?\n'
+          '***************************************************\n'
+          '** (1) 2D\n'
+          '** (2) 3D\n'
+          '***************************************************')
 
     choice = choice_and_clear(2)
 
@@ -204,11 +210,12 @@ def graphic_dim_question():
 
 
 def storage_question():
-    print('***')
-    print('Jaki rodzaj nośnika preferujesz w konsoli?')
-    print('(1) kartridż')
-    print('(2) płyta CD/DVD')
-    print('***')
+    print('*************************************************\n'
+          '** Jaki rodzaj nośnika preferujesz w konsoli?\n'
+          '*************************************************\n'
+          '** (1) kartridż\n'
+          '** (2) płyta CD/DVD\n'
+          '*************************************************')
 
     choice = choice_and_clear(2)
 
@@ -233,13 +240,14 @@ def storage_question():
 
 # zmiania na pytanie obejmujące ilość portów w konsoli na kontrolery (bez adapterów)
 def stationary_ports_question():
-    print('***')
-    print('Ile portów na kontrolery powinna posiadać\n'
-          'konsola? (adaptery nie są brane pod uwagę)')
-    print('(1) 1')
-    print('(2) 2')
-    print('(3) 4')
-    print('***')
+    print('**********************************************\n'
+          '** Ile portów na kontrolery powinna posiadać\n'
+          '** konsola? (adaptery nie są brane pod uwagę)\n'
+          '**********************************************\n'
+          '** (1) 1\n'
+          '** (2) 2\n'
+          '** (3) 4\n'
+          '**********************************************')
 
     choice = choice_and_clear(3)
 
@@ -265,12 +273,13 @@ def stationary_ports_question():
 
 
 def online_multi_question():
-    print('***')
-    print('Czy przewidujesz grę po sieci jeśli')
-    print('jest to możliwe?')
-    print('(1) tak')
-    print('(2) nie')
-    print('***')
+    print('*****************************************\n'
+          '** Czy przewidujesz grę po sieci jeśli\n'
+          '** jest to możliwe?\n'
+          '*****************************************\n'
+          '** (1) tak\n'
+          '** (2) nie\n'
+          '*****************************************')
 
     choice = choice_and_clear(2)
 
@@ -284,11 +293,12 @@ def online_multi_question():
 
 
 def graphic_colors_question():
-    print('***')
-    print('Jaki rodzaj grafiki ma mieć twoja konsola?')
-    print('(1) odcienie szarości/monochromatyczny')
-    print('(2) kolor')
-    print('***')
+    print('***********************************************\n'
+          '** Jaki rodzaj grafiki ma mieć twoja konsola?\n'
+          '***********************************************\n'
+          '** (1) odcienie szarości/monochromatyczny\n'
+          '** (2) kolor\n'
+          '***********************************************')
 
     choice = choice_and_clear(2)
 
@@ -310,12 +320,13 @@ def graphic_colors_question():
 
 
 def battery_time_question():
-    print('***')
-    print('Jaki czas pracy na baterii jest dla ciebie optymalny?')
-    print('(1) 2-8 godzin')
-    print('(2) 8 i więcej godzin')
-    print('(3) bez znaczenia')
-    print('***')
+    print('**********************************************************\n'
+          '** Jaki czas pracy na baterii jest dla ciebie optymalny?\n'
+          '**********************************************************\n'
+          '** (1) 2-8 godzin\n'
+          '** (2) 8 i więcej godzin\n'
+          '** (3) bez znaczenia\n'
+          '**********************************************************')
 
     choice = choice_and_clear(3)
 
@@ -335,11 +346,12 @@ def battery_time_question():
 
 
 def battery_type_question():
-    print('***')
-    print('Baterie czy wbudowany akumulator?')
-    print('(1) baterie')
-    print('(2) wbudowany akumulator')
-    print('***')
+    print('**************************************\n'
+          '** Baterie czy wbudowany akumulator?\n'
+          '**************************************\n'
+          '** (1) baterie\n'
+          '** (2) wbudowany akumulator\n'
+          '**************************************')
 
     choice = choice_and_clear(2)
 
@@ -361,11 +373,12 @@ def battery_type_question():
 
 
 def display_backlight_question():
-    print('***')
-    print('Czy konsola ma posiadać podświetlenie ekranu?')
-    print('(1) tak')
-    print('(2) nie')
-    print('***')
+    print('**************************************************\n'
+          '** Czy konsola ma posiadać podświetlenie ekranu?\n'
+          '**************************************************\n'
+          '** (1) tak\n'
+          '** (2) nie\n'
+          '**************************************************')
 
     choice = choice_and_clear(2)
 
@@ -386,12 +399,15 @@ def display_backlight_question():
     local_multi_question()
 
 
+# w sumie prawie każda przenośna konsola to oferowała
+# zastanawiam się nad usunięciem tego pytania
 def local_multi_question():
-    print('***')
-    print('Czy interesuje ciebie gra lokalna?')
-    print('(1) tak')
-    print('(2) nie')
-    print('***')
+    print('***************************************\n'
+          '** Czy interesuje ciebie gra lokalna?\n'
+          '***************************************\n'
+          '** (1) tak\n'
+          '** (2) nie\n'
+          '***************************************')
 
     choice = choice_and_clear(2)
 
@@ -399,13 +415,14 @@ def local_multi_question():
 
 
 def games_library_question():
-    print('***')
-    print('Jakiej wielkości biblioteka gier ma być dostępna na sprzęt?')
-    print('(1) duża')
-    print('(2) średnia')
-    print('(3) mała')
-    print('(4) bez znaczenia')
-    print('***')
+    print('****************************************************************\n'
+          '** Jakiej wielkości biblioteka gier ma być dostępna na sprzęt?\n'
+          '****************************************************************\n'
+          '** (1) duża\n'
+          '** (2) średnia\n'
+          '** (3) mała\n'
+          '** (4) bez znaczenia\n'
+          '****************************************************************')
 
     choice = choice_and_clear(4)
 
@@ -427,14 +444,18 @@ def games_library_question():
     accessories_question()
 
 
+# pytanie bardzo ogólne, ciężko przypisać do tego
+# konsole, bo do każdej były jakieś akcesoria
+# możliwe, że zostanie usunięte
 def accessories_question():
-    print('***')
-    print('Czy ma dla ciebie znaczenie wsparcie konsoli')
-    print('o akcesoria 1st i 3rd party?')
-    print('(1) tak')
-    print('(2) tak, ale tylko 1st party')
-    print('(3) nie')
-    print('***')
+    print('*************************************************\n'
+          '** Czy ma dla ciebie znaczenie wsparcie konsoli\n'
+          '** o akcesoria 1st i 3rd party?\n'
+          '*************************************************\n'
+          '** (1) tak\n'
+          '** (2) tak, ale tylko 1st party\n'
+          '** (3) nie\n'
+          '*************************************************')
 
     choice = choice_and_clear(3)
 
@@ -442,13 +463,14 @@ def accessories_question():
 
 
 def extra_functions_question():
-    print('***')
-    print('Jeżeli konsola pełni dodatkowe funckje (bez dodatkowych')
-    print('akcesoriów), np: odtwarzanie muzyki bądź filmów, rozmowy telefoniczne')
-    print('to czy byłbyś nimi zainteresowany?')
-    print('(1) tak')
-    print('(2) nie')
-    print('***')
+    print('*************************************************************************\n'
+          '** Jeżeli konsola pełni dodatkowe funckje (bez dodatkowych akcesoriów),\n'
+          '** np: odtwarzanie muzyki bądź filmów, rozmowy telefoniczne\n'
+          '** to czy byłbyś nimi zainteresowany?\n'
+          '*************************************************************************\n'
+          '** (1) tak\n'
+          '** (2) nie\n'
+          '*************************************************************************')
 
     choice = choice_and_clear(2)
 
@@ -460,14 +482,15 @@ def extra_functions_question():
     popularity_question()
 
 
-def popularity_question():  # DONE
-    print('***')
-    print('W jakim stopniu upragniony sprzęt ma być')
-    print('popularnym wyborem w latach jego świetności?')
-    print('(1) najpopularniejszym')
-    print('(2) popularnym')
-    print('(3) mało popularnym/niszowym')
-    print('***')
+def popularity_question():
+    print('*************************************************\n'
+          '** W jakim stopniu upragniony sprzęt ma być\n'
+          '** popularnym wyborem w latach jego świetności?\n'
+          '*************************************************\n'
+          '** (1) najpopularniejszym\n'
+          '** (2) popularnym\n'
+          '** (3) mało popularnym/niszowym\n'
+          '*************************************************')
 
     choice = choice_and_clear(3)
 
@@ -499,15 +522,15 @@ def removing_flagged_consoles():
 
 
 def budget_question():
-    print('***')
-    print('Podaj maksymalny budżet przeznaczony na zakup konsoli.')
-    print('***')
+    print('***********************************************************\n'
+          '** Podaj maksymalny budżet przeznaczony na zakup konsoli.\n'
+          '***********************************************************')
 
     budget = input('Wpisz budżet: PLN ')
 
     if not budget.isdigit():
         os.system('cls' if os.name == 'nt' else 'clear')
-        print('Podano nieprawidłową wartość.')
+        print('[Podano nieprawidłową wartość.]')
         budget_question()
 
     for key in list(manage.console_points.keys()):
