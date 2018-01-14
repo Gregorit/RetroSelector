@@ -524,14 +524,14 @@ def removing_flagged_consoles():
 def budget_question():
     print('***********************************************************\n'
           '** Podaj maksymalny budżet przeznaczony na zakup konsoli.\n'
+          '** Nie używaj liczb zmiennoprzecinkowych.\n'
           '***********************************************************')
 
     budget = input('Wpisz budżet: PLN ')
 
-    if not budget.isdigit():
-        os.system('cls' if os.name == 'nt' else 'clear')
+    while not budget.isdigit():
         print('[Podano nieprawidłową wartość.]')
-        budget_question()
+        budget = input('Wpisz budżet: PLN ')
 
     for key in list(manage.console_points.keys()):
         if int(data[key]['price']) > int(budget):
