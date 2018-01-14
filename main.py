@@ -8,32 +8,40 @@ def fancy_function():
 
 
 def exit_confirmation():
-    print('Czy na pewno chcesz zakończyć program?')
-    print('(1) Tak')
-    print('(0) Nie')
+    print('*******************************************\n'
+          '** Czy na pewno chcesz zakończyć program?\n'
+          '*******************************************\n'
+          '** (1) Tak\n'
+          '** (0) Nie\n'
+          '*******************************************')
     exit_choice = input("Wybór: ")
     if exit_choice == '1':
         print('Do zobaczenia wkrótce!')
         exit(0)
+    elif exit_choice == '0':
+        menu()
+    else:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        exit_confirmation()
 
 
 def menu():
     # czyszczenie międzyplatformowe konsoli/terminala
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('         *******************')
-    print('         ** RetroSelector **         ')
-    print('*************************************')
-    print('** Autorzy:     Grzegorz Urych     **')
-    print('**            Grzegorz Zakrzewski  **')
-    print('*************************************')
-    print('\n    ****************************')
-    print('    **          MENU          **')
-    print('    ****************************')
-    print('    ** (1) Rozpocznij program **')
-    print('    ** (2) O programie        **')
-    print('    ****************************')
-    print('    ** (0) Zakończ program    **')
-    print('    ****************************')
+    print('*************************************\n'
+          '**          RetroSelector          **\n'
+          '*************************************\n'
+          '** Autorzy:     Grzegorz Urych     **\n'
+          '**            Grzegorz Zakrzewski  **\n'
+          '*************************************\n\n'
+          '    ****************************\n'
+          '    **          MENU          **\n'
+          '    ****************************\n'
+          '    ** (1) Rozpocznij program **\n'
+          '    ** (2) O programie        **\n'
+          '    ****************************\n'
+          '    ** (0) Zakończ program    **\n'
+          '    ****************************')
 
     action = {
         '1': questions,
