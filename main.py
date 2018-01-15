@@ -2,9 +2,18 @@ import os
 from selector import questions
 
 
-def fancy_function():
-    print('Chyba Cię coś pokiełbasiło. Opis jest jeszcze nie gotowy!')
-    input('\n                 O gówno, ja przepraszam. Kliknij [Enter]')
+def about():
+    print('**********************************************************\n'
+          '** Program ma za zadanie wybrać konsolę retro według\n'
+          '** na podstawie wyborów z zadanych pytań.\n'
+          '**\n'
+          '** Pytania o generację oraz rodzaj konsoli odrzucają\n'
+          '** niepasujący do wyboru sprzęt.\n'
+          '**\n'
+          '** Jeżeli podany budżet nie będzie za niski, to zostanie\n'
+          '** zarekomendowana konsola zgodna z wyborami.\n'
+          '**********************************************************')
+    input('                                           Kliknij [Enter]')
 
 
 def exit_confirmation():
@@ -45,7 +54,7 @@ def menu():
 
     action = {
         '1': questions,
-        '2': fancy_function,
+        '2': about,
         '0': exit_confirmation
     }
 
