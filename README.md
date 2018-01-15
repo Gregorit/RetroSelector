@@ -1,5 +1,3 @@
-***<p align="center">Project in developement</p>***
-
 # RetroSelector
 
 *An expert system for choosing video game console*
@@ -7,6 +5,10 @@
 ## Prerequisites
 
 ## Usage
+
+## Authors
+* [Gregorit](https://github.com/Gregorit)
+* [grzegorzekkk](https://github.com/grzegorzekkk)
 
 ## Tools used in project
 
