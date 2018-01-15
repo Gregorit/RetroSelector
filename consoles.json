@@ -17,7 +17,8 @@
     "online": "not available",
     "extra_functions": "no",
     "popularity": "popular",
-    "popular_genre": "action"
+    "popular_genre": "action",
+    "games_obligatory_accessories": "no"
   },
   "Master_System": {
     "name": "Sega Master System",
@@ -36,7 +37,9 @@
     "read_more": "https://goo.gl/YyfvXA",
     "online": "not available",
     "extra_functions": "no",
-    "popularity": "popular"
+    "popularity": "popular",
+    "popular_genre": "platform",
+    "games_obligatory_accessories": "yes"
   },
   "NES": {
     "name": "Nintendo Entertainment System",
@@ -56,7 +59,8 @@
     "online": "not available",
     "extra_functions": "no",
     "popularity": "most popular",
-    "popular_genre": "platform"
+    "popular_genre": "action",
+    "games_obligatory_accessories": "yes"
   },
   "Mega_Drive": {
     "name": "Sega Mega Drive",
@@ -75,7 +79,9 @@
     "read_more": "https://goo.gl/92p0ll",
     "online": "not available",
     "extra_functions": "no",
-    "popularity": "most popular"
+    "popularity": "most popular",
+    "popular_genre": "action",
+    "games_obligatory_accessories": "yes"
   },
   "Neo_Geo": {
     "name": "Neo Geo (AES)",
@@ -94,7 +100,9 @@
     "read_more": "https://goo.gl/fGYPM1",
     "online": "not available",
     "extra_functions": "no",
-    "popularity": "not popular"
+    "popularity": "not popular",
+    "popular_genre": "fighting",
+    "games_obligatory_accessories": "no"
   },
   "SNES": {
     "name": "Super Nintendo Entertainment System",
@@ -113,7 +121,9 @@
     "read_more": "https://goo.gl/Du9Q9Y",
     "online": "not available",
     "extra_functions": "no",
-    "popularity": "most popular"
+    "popularity": "most popular",
+    "popular_genre": "action",
+    "games_obligatory_accessories": "yes"
   },
   "TurboGrafx_16": {
     "name": "TurboGrafx-16",
@@ -132,7 +142,9 @@
     "read_more": "https://goo.gl/k4BEb5",
     "online": "not available",
     "extra_functions": "no",
-    "popularity": "popular"
+    "popularity": "popular",
+    "popular_genre": "platform",
+    "games_obligatory_accessories": "no"
   },
   "3DO": {
     "name": "3DO (Panasonic FZ-1)",
@@ -151,7 +163,9 @@
     "read_more": "https://goo.gl/9wZeBk",
     "online": "not available",
     "extra_functions": "no",
-    "popularity": "not popular"
+    "popularity": "not popular",
+    "popular_genre": "platform",
+    "games_obligatory_accessories": "yes"
   },
   "Jaguar": {
     "name": "Atari Jaguar",
@@ -171,7 +185,8 @@
     "online": "not available",
     "extra_functions": "no",
     "popularity": "not popular",
-    "popular_genre": "shooter"
+    "popular_genre": "shooter",
+    "games_obligatory_accessories": "no"
   },
   "N64": {
     "name": "Nintendo 64",
@@ -190,7 +205,9 @@
     "read_more": "https://goo.gl/SPwXfx",
     "online": "not available",
     "extra_functions": "no",
-    "popularity": "popular"
+    "popularity": "popular",
+    "popular_genre": "adventure",
+    "games_obligatory_accessories": "no"
   },
   "PlayStation": {
     "name": "PlayStation",
@@ -210,7 +227,9 @@
     "online": "not available",
     "extra_functions": "yes",
     "popularity": "most popular",
-    "best_genre": "sports (adventure)"
+    "best_genre": "sports (adventure)",
+    "popular_genre": "fighting",
+    "games_obligatory_accessories": "yes"
   },
   "Saturn": {
     "name": "Sega Saturn",
@@ -229,7 +248,9 @@
     "read_more": "https://goo.gl/rZHUOT",
     "online": "active",
     "extra_functions": "yes",
-    "popularity": "not popular"
+    "popularity": "not popular",
+    "popular_genre": "fighting",
+    "games_obligatory_accessories": "yes"
   },
   "Dreamcast": {
     "name": "Dreamcast",
@@ -248,7 +269,9 @@
     "read_more": "https://goo.gl/PZEWUp",
     "online": "active",
     "extra_functions": "yes",
-    "popularity": "not popular"
+    "popularity": "not popular",
+    "popular_genre": "racing",
+    "games_obligatory_accessories": "yes"
   },
   "GameCube": {
     "name": "GameCube",
@@ -267,7 +290,9 @@
     "read_more": "https://goo.gl/v0TEh6",
     "online": "active",
     "extra_functions": "no",
-    "popularity": "popular"
+    "popularity": "popular",
+    "popular_genre": "adventure",
+    "games_obligatory_accessories": "yes"
   },
   "PlayStation_2": {
     "name": "PlayStation 2",
@@ -287,7 +312,8 @@
     "online": "active",
     "extra_functions": "yes",
     "popularity": "most popular",
-    "popular_genre": "sports"
+    "popular_genre": "role-playing",
+    "games_obligatory_accessories": "yes"
   },
   "Xbox": {
     "name": "Xbox",
@@ -306,7 +332,9 @@
     "read_more": "https://goo.gl/175Wim",
     "online": "active",
     "extra_functions": "yes",
-    "popularity": "popular"
+    "popularity": "popular",
+    "popular_genre": "shooter",
+    "games_obligatory_accessories": "yes"
   },
   "GB": {
     "name": "Game Boy",
@@ -328,7 +356,8 @@
     "playtime_in_words": "long",
     "power_type": "battery",
     "extra_functions": "no",
-    "popularity": "most popular"
+    "popularity": "most popular",
+    "popular_genre": "role-playing"
   },
   "Game_Gear": {
     "name": "Sega Game Gear",
@@ -350,7 +379,8 @@
     "playtime_in_words": "short",
     "power_type": "battery",
     "extra_functions": "no",
-    "popularity": "popular"
+    "popularity": "popular",
+    "popular_genre": "platform"
   },
   "Lynx": {
     "name": "Atari Lynx",
@@ -395,7 +425,8 @@
     "playtime_in_words": "long",
     "power_type": "battery",
     "extra_functions": "no",
-    "popularity": "most popular"
+    "popularity": "most popular",
+    "popular_genre": "adventure"
   },
   "Neo_Geo_Pocket": {
     "name": "Neo Geo Pocket",
@@ -417,7 +448,8 @@
     "playtime_in_words": "long",
     "power_type": "battery",
     "extra_functions": "no",
-    "popularity": "not popular"
+    "popularity": "not popular",
+    "popular_genre": "fighting"
   },
   "Virtual_Boy": {
     "name": "Virtual Boy",
@@ -439,7 +471,8 @@
     "playtime_in_words": "short",
     "power_type": "battery",
     "extra_functions": "no",
-    "popularity": "not popular"
+    "popularity": "not popular",
+    "popular_genre": "action"
   },
   "WonderSwan": {
     "name": "WonderSwan",
@@ -461,7 +494,8 @@
     "playtime_in_words": "long",
     "power_type": "battery",
     "extra_functions": "no",
-    "popularity": "not popular"
+    "popularity": "not popular",
+    "popular_genre": "role-playing"
   },
   "GBA": {
     "name": "Game Boy Advance",
@@ -483,7 +517,8 @@
     "playtime_in_words": "long",
     "power_type": "battery/rechargeable",
     "extra_functions": "no",
-    "popularity": "most popular"
+    "popularity": "most popular",
+    "popular_genre": "role-playing"
   },
   "Neo_Geo_Pocket_Color": {
     "name": "Neo Geo Pocket Color",
@@ -505,7 +540,8 @@
     "playtime_in_words": "long",
     "power_type": "battery",
     "extra_functions": "no",
-    "popularity": "not popular"
+    "popularity": "not popular",
+    "popular_genre": "fighting"
   },
   "N-Gage": {
     "name": "N-Gage",
@@ -528,6 +564,6 @@
     "power_type": "rechargeable",
     "extra_functions": "yes",
     "popularity": "not popular",
-    "popular_genre": "sports"
+    "popular_genre": "platform"
   }
 }
