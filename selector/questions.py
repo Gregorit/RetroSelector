@@ -132,30 +132,57 @@ def generation_question():
     game_genre_question(choice)
 
 
-# samemu uznać jakie kategorie są najpopularniejsze (max 2)
 def game_genre_question(gen_choice):
-    print('**********************************************\n'
-          '** Jaki gatunek gier preferujesz najbardziej?\n'
-          '**********************************************\n'
+    print('*******************************************\n'
+          '** Jaki gatunek gier z poniższej listy\n'
+          '** preferujesz najbardziej?\n'
+          '*******************************************\n'
           '** (1) gry akcji\n'
           '** (2) przygodowe\n'
           '** (3) platformówki\n'
-          '** (4) symulacyjne\n'
+          '** (4) bijatyki\n'
           '** (5) RPG\n'
           '** (6) strzelanki\n'
-          '** (7) strategie\n'
-          '** (8) wyścigowe\n'
-          '** (9) sportowe\n'
-          '** (10) bez znaczenia\n'
-          '**********************************************')
+          '** (7) wyścigowe\n'
+          '** (8) bez znaczenia\n'
+          '*******************************************')
 
-    choice = choice_and_clear(10)
+    choice = choice_and_clear(8)
 
-    # if choice is '1':
-    #     manage.add_points('NES', 1)
-    # elif choice is '2':
-    #     manage.add_points('SNES', 1)
-    # [...]
+    if choice is '1':
+        for key in data:
+            if data[key]['popular_genre'] == 'action':
+                manage.add_points(key, 1)
+
+    elif choice is '2':
+        for key in data:
+            if data[key]['popular_genre'] == 'adventure':
+                manage.add_points(key, 1)
+
+    elif choice is '3':
+        for key in data:
+            if data[key]['popular_genre'] == 'platform':
+                manage.add_points(key, 1)
+
+    elif choice is '4':
+        for key in data:
+            if data[key]['popular_genre'] == 'fighting':
+                manage.add_points(key, 1)
+
+    elif choice is '5':
+        for key in data:
+            if data[key]['popular_genre'] == 'role-playing':
+                manage.add_points(key, 1)
+
+    elif choice is '6':
+        for key in data:
+            if data[key]['popular_genre'] == 'shooter':
+                manage.add_points(key, 1)
+
+    elif choice is '7':
+        for key in data:
+            if data[key]['popular_genre'] == 'racing':
+                manage.add_points(key, 1)
 
     if gen_choice is '1':
         storage_question()
@@ -267,6 +294,27 @@ def stationary_ports_question():
         for key in data:
             if key in manage.stationary and \
                data[key]['ports'] == '3':
+                manage.add_points(key, 1)
+
+    accessories_question()
+
+
+def accessories_question():
+    print('*************************************************\n'
+          '** Czy byłbyś zainteresowany graniem w gry,\n'
+          '** które wymagają dodatkowych akcesorii?\n'
+          '** (np. pistolety świetlne, maty taneczne)\n'
+          '*************************************************\n'
+          '** (1) tak\n'
+          '** (2) nie\n'
+          '*************************************************')
+
+    choice = choice_and_clear(2)
+
+    if choice is '1':
+        for key in data:
+            if key in manage.stationary and \
+               data[key]['games_obligatory_accessories'] == 'yes':
                 manage.add_points(key, 1)
 
     online_multi_question()
@@ -396,21 +444,6 @@ def display_backlight_question():
                data[key]['light'] == 'zależne od wersji'):
                 manage.add_points(key, 2)
 
-    local_multi_question()
-
-
-# w sumie prawie każda przenośna konsola to oferowała
-# zastanawiam się nad usunięciem tego pytania
-def local_multi_question():
-    print('***************************************\n'
-          '** Czy interesuje ciebie gra lokalna?\n'
-          '***************************************\n'
-          '** (1) tak\n'
-          '** (2) nie\n'
-          '***************************************')
-
-    choice = choice_and_clear(2)
-
     games_library_question()
 
 
@@ -440,24 +473,6 @@ def games_library_question():
         for key in data:
             if int(data[key]['library_number']) in range(0, 250):
                 manage.add_points(key, 2)
-
-    accessories_question()
-
-
-# pytanie bardzo ogólne, ciężko przypisać do tego
-# konsole, bo do każdej były jakieś akcesoria
-# możliwe, że zostanie usunięte
-def accessories_question():
-    print('*************************************************\n'
-          '** Czy ma dla ciebie znaczenie wsparcie konsoli\n'
-          '** o akcesoria 1st i 3rd party?\n'
-          '*************************************************\n'
-          '** (1) tak\n'
-          '** (2) tak, ale tylko 1st party\n'
-          '** (3) nie\n'
-          '*************************************************')
-
-    choice = choice_and_clear(3)
 
     extra_functions_question()
 
